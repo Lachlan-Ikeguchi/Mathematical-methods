@@ -1,0 +1,80 @@
+\documentclass[a4paper,10pt]{report}
+    \usepackage[utf8]{inputenc}
+    \usepackage{cancel}
+    \usepackage[margin=2cm]{geometry}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+
+    % Title Page
+    \title{Mathematical methods}
+    \author{Lachlan Takumi Ikeguchi}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+	This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, contact lachlanprivate@duck.com or through the discord server: https://discord.gg/6P8rddkXFr
+\end{abstract}
+
+\section{Important symbols}
+\begin{center}
+	\begin{tabular}{l|lp{6cm}}
+		Symbol & Mathematical definition & Simple definition \\ \hline
+	\end{tabular}
+\end{center}
+
+\pagebreak
+
+\section{Arithmatic sequence}
+An arithmatic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.  The recursive definition of a sequence is:
+$$t_{n + 1} = t_n + d$$
+where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by"\\
+
+And the general equation for finding the $n^{\text{th}}$ term of the sequence is:
+$$t_n = t_1 + (n - 1)d$$
+$t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
+
+\subsection{Sum of all prior arithmetic sequence}
+The sum of all arithmatic sequence is given by:
+$$S_n = \frac{n}{2}(2t_1 + (n - 1)d) = \frac{n}{2}(t_1 + t_n)$$
+
+\section{Functions}
+Functions can be viewed as an mathematical machine where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be useful.  A simple function which calculates the y-values along a parabola with the x coordinates as input could be:
+$$M(x) = x^2$$
+
+This function would return the values:
+\begin{center}
+	\begin{tabular}{l|l}
+		$x$  & $M(x)$ \\ \hline
+		-3 & 9    \\
+		-2 & 4    \\
+		-1 & 1    \\
+		0  & 0    \\
+		1  & 1    \\
+		2  & 4    \\
+		3  & 9
+	\end{tabular}
+\end{center}
+
+\section{Interval notation}
+Intervals notation are used to define the range of something.  For example, if givien a function where the y-values start at 0 and approach but never reach 1, to define the range of the function, it would be $0 \leq y < 1$.  However, this can be rewritten using interval notation as: [0, 1).  The square bracket meaning that it is, and and less than or greater than, and the parenthesis meaning that it is greater than or less than but never reaching the value.
+
+\bold{NOTE:  it is called a ``range" when it is the y-value, and a ``domain" when it is the x-value}
+
+\section{Relations and Functions}
+There are four types of relations, relations meaning for any x-value, how many valid y-values there are.  The four are: one-to-one, many-to-one, one-to-many, and many-to-many.\\
+
+The first, (one-to-one) relation means that for any x-values, there is only one y-value.  An example would be a straight line: $f(x) = 2x + 3$\\
+
+The second, (many-to-one) relation means that for any y-values, there are more than one x-value.  An example would be a parabola: $f(x) = x^2$\\
+
+The above are examples of functions, the below are not.\\
+
+The third, (one-to-many) relations means that for any x-value, there are more than one y-value\\
+
+And for the last, (many-to-many) relations means that for any x-value, there are more than one y-value, and the reverse is also true
+
+\bibliography{}
+\end{document}
