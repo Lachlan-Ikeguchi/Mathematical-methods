@@ -26,12 +26,13 @@
 \section{Important symbols}
 \begin{center}
 	\begin{tabular}{l|lp{6cm}}
-		Symbol  & Mathematical definition                                                  & Simple definition                                                                                              \\ \hline
-		$\cup$  & Union                                                                    & $A$ \emph{and} $B$, or think as in 'add'.                                                                      \\
-		$\cap$  & Intersection                                                             & $A$ \emph{or} $B$, or think as in 'multiply'.                                                                  \\
-		$n!$    & $n \times (n-1) \times (n-2) \times (n-3)... \times 3 \times 2 \times 1$ & The product of integers between the given value and 1.                                                         \\
-		$^nP_r$ & $\frac{n!}{(n-r)!}$                                                      & The number of combinations there are of length $r$ from a group of length $n$ where the order matters.         \\
-		$^nC_r$ & $\frac{\frac{n!}{(n-r)!}}{r!}$                                           & The number of combinations there are of length $r$ from a group of length $n$ where the order does not matter. \\
+		Symbol        & Mathematical definition                                                  & Simple definition                                                                                              \\ \hline
+		$\cup$        & Union                                                                    & $A$ \emph{and} $B$, or think as in 'add'.                                                                      \\
+		$\cap$        & Intersection                                                             & $A$ \emph{or} $B$, or think as in 'multiply'.                                                                  \\
+		$n!$          & $n \times (n-1) \times (n-2) \times (n-3)... \times 3 \times 2 \times 1$ & The product of integers between the given value and 1.                                                         \\
+		$^nP_r$       & $\frac{n!}{(n-r)!}$                                                      & The number of combinations there are of length $r$ from a group of length $n$ where the order matters.         \\
+		$^nC_r$       & $\frac{\frac{n!}{(n-r)!}}{r!}$                                           & The number of combinations there are of length $r$ from a group of length $n$ where the order does not matter. \\
+		$\Comb{n}{r}$ & $^nC_r$                                                                  & The same as the combinations but in a different notation.
 	\end{tabular}
 \end{center}
 
@@ -742,31 +743,32 @@ The Pascal's triangle can be extended to the binomial theorem, where the rule fo
 \section{Geometric sequences}
 Geometric sequences are similar to arithmatic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
 $$
-    t_n = t_1 \times r^{n - 1}
+	t_n = t_1 \times r^{n - 1}
 $$
 Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the n\textsuperscript{th} term, and $t_1$ is the first term.\\
 And the recursive definition is:
 $$
-    t_{n + 1} = r \times t_n
+	t_{n + 1} = r \times t_n
 $$
 The sum of the first n\textsuperscript{th} terms of a geometric sequence is:
 $$
-    S_n = t_1 \times \frac{r^n - 1}{r - 1}
+	S_n = t_1 \times \frac{r^n - 1}{r - 1}
 $$
 And the sum of an infinate geometric sequence is:
 $$
-    S_{\infty} = \frac{t_1}{1 - r}
+	S_{\infty} = \frac{t_1}{1 - r}
 $$
 \begin{center}
-    \emph{NOTE: This equation only provides a non-infinate solution where $-1 < r < 1$}
+	\emph{NOTE: This equation only provides a non-infinate solution where $-1 < r < 1$}
 \end{center}
 
 Compund interest is:
 $$
-    A = (1 + r)^n \times P
+	A = (1 + r)^n \times P
 $$
 Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the inital investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
 
 \end{document}
+
 
 
