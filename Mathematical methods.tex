@@ -9,8 +9,6 @@
 
 \graphicspath{ {./} }
 
-\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
-
 % Title Page
 \title{Mathematical methods}
 \author{Lachlan Takumi Ikeguchi}
@@ -26,13 +24,13 @@
 \section{Important symbols}
 \begin{center}
 	\begin{tabular}{l|lp{6cm}}
-		Symbol        & Mathematical definition                                                  & Simple definition                                                                                              \\ \hline
-		$\cup$        & Union                                                                    & $A$ \emph{and} $B$, or think as in 'add'.                                                                      \\
-		$\cap$        & Intersection                                                             & $A$ \emph{or} $B$, or think as in 'multiply'.                                                                  \\
-		$n!$          & $n \times (n-1) \times (n-2) \times (n-3)... \times 3 \times 2 \times 1$ & The product of integers between the given value and 1.                                                         \\
-		$^nP_r$       & $\frac{n!}{(n-r)!}$                                                      & The number of combinations there are of length $r$ from a group of length $n$ where the order matters.         \\
-		$^nC_r$       & $\frac{\frac{n!}{(n-r)!}}{r!}$                                           & The number of combinations there are of length $r$ from a group of length $n$ where the order does not matter. \\
-		$\Comb{n}{r}$ & $^nC_r$                                                                  & The same as the combinations but in a different notation.
+		Symbol         & Mathematical definition                                                  & Simple definition                                                                                              \\ \hline
+		$\cup$         & Union                                                                    & $A$ \emph{and} $B$, or think as in `add'.                                                                      \\
+		$\cap$         & Intersection                                                             & $A$ \emph{or} $B$, or think as in `multiply'.                                                                  \\
+		$n!$           & $n \times (n-1) \times (n-2) \times (n-3)... \times 3 \times 2 \times 1$ & The product of integers between the given value and 1.                                                         \\
+		$^nP_r$        & $\frac{n!}{(n-r)!}$                                                      & The number of combinations there are of length $r$ from a group of length $n$ where the order matters.         \\
+		$^nC_r$        & $\frac{n!}{(n-r)!r!}$                                                    & The number of combinations there are of length $r$ from a group of length $n$ where the order does not matter. \\
+		$\binom{n}{r}$ & $^nC_r$                                                                  & The same as the combinations but in a different notation.
 	\end{tabular}
 \end{center}
 
@@ -141,7 +139,7 @@ $$
 This means as $x$ is equal to or greater than 0, $y$ is $x$, but if $x$ is less than 0, $y$ is $-x$
 
 \section{Quadratics}
-\subsection{general or polynomial form}
+\subsection{General or polynomial form}
 The general or polynomial form of a quadratic is:
 $$
 	y = ax^2 + bx + c
@@ -168,7 +166,7 @@ $$
 $$
 Where it intercepts the x-axis at points $x = b$ and $x = c$
 
-And the axis of symetry for this form is:
+And the axis of symmetry for this form is:
 $$
 	x = \frac{b + c}{2}
 $$
@@ -197,7 +195,7 @@ If given the turning point, use the turning point form and substitute the coordi
 		c  & = 11                                              \\
 		5  & = \cancelto{a}{a(1)^2} + \cancelto{b}{b(1)} + c   \\
 		5  & = a + b + c                                       \\
-		3  & + \cancelto{4a}{a(2)^2} + \cancelto{2b}{b(2)} + c \\
+		3  & = \cancelto{4a}{a(2)^2} + \cancelto{2b}{b(2)} + c \\
 	\end{align*}
 	\begin{align*}
 		5       & = a + b + 11   \\
@@ -358,7 +356,7 @@ $$
 Where $k$ is the constant of proportionality.
 
 \section{Circles}
-Circles are a relation as opposed to a function as it fails the virtical line test, and the equation of a circle is:
+Circles are a relation as opposed to a function as it fails the vertical line test, and the equation of a circle is:
 $$
 	(x - a)^2 + (y - b)^2 = r^2
 $$
@@ -670,7 +668,7 @@ $$^nC_r = \frac{^nP_r}{r!}$$
 $$^nC_r = \frac{\frac{n!}{(n-r)!}}{r!}$$
 Or
 $$
-	\Comb{n}{r}
+	\binom{n}{r}
 $$
 Example:\\
 \begin{align*}
@@ -769,6 +767,3 @@ $$
 Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the inital investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
 
 \end{document}
-
-
-
