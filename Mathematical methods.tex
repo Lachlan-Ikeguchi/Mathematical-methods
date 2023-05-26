@@ -6,8 +6,13 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
-\graphicspath{ {./} }
+\graphicspath{ {./images/} }
+
+% User defined environments\
+% \newenvironment{description}{}{}
+\newenvironment{example}{As an example:\\}{}
 
 % Title Page
 \title{Mathematical methods}
@@ -733,13 +738,13 @@ The Pascal's triangle can be extended to the binomial theorem, where the rule fo
 		Division             & $\frac{a^m}{a^n} = a^{m - n}$                       \\
 		Raising to a power   & $(a^n)^m = a^{n \times m}$                          \\
 		To the power of zero & $a^0 = 1$                                           \\
-		Negative indicies    & $a^{-n} = \frac{1}{a^n}, a \not = 0$                \\
-		Fractional indicies  & $a^{\frac{m}{n}} = (\sqrt[n]{a})^m = \sqrt[n]{a^m}$
+		Negative indices     & $a^{-n} = \frac{1}{a^n}, a \not = 0$                \\
+		Fractional indices   & $a^{\frac{m}{n}} = (\sqrt[n]{a})^m = \sqrt[n]{a^m}$
 	\end{tabular}
 \end{center}
 
 \section{Geometric sequences}
-Geometric sequences are similar to arithmatic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
+Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
 $$
 	t_n = t_1 \times r^{n - 1}
 $$
@@ -752,18 +757,51 @@ The sum of the first n\textsuperscript{th} terms of a geometric sequence is:
 $$
 	S_n = t_1 \times \frac{r^n - 1}{r - 1}
 $$
-And the sum of an infinate geometric sequence is:
+And the sum of an infinite geometric sequence is:
 $$
 	S_{\infty} = \frac{t_1}{1 - r}
 $$
 \begin{center}
-	\emph{NOTE: This equation only provides a non-infinate solution where $-1 < r < 1$}
+	\emph{NOTE: This equation only provides a non-infinite solution where $-1 < r < 1$}
 \end{center}
 
-Compund interest is:
+Compound interest is:
 $$
 	A = (1 + r)^n \times P
 $$
-Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the inital investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
+Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the initial investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
+
+\section{Exponential functions}
+An exponential function increases or decreases at an accelerating rate, they have an asymptotes, a line which it approaches but never reach, and intersect the y-axis at point $(0, 1)$.  The general form of an exponential function equation is:
+$$
+	y = a^x
+$$
+Where positive $a$ values increases exponentially, and negative $a$ approaches the asymptote as the x-value increases.
+
+\subsection{Translations}
+To translate the exponential function along the x-axis, use the formula:
+$$
+	y = a^{x - c}
+$$
+Where $c$ is the translation along the x-axis.\\
+
+To translate the exponential function along the y-axis, use the formula:
+$$
+	y = a^x + d
+$$
+Where $d$ is the translation along the y-axis.
+
+\subsection{Dilations}
+To dilate the exponential function from the x-axis, use the formula:
+$$
+	y = b \times a^x
+$$
+Where $b$ is the dialation factor from the y-axis.  This dialation affects the y-intercept, but the asymptote stays at $y = 0$\\
+
+To dilate the exponential function from the y-axis, use the formula:
+$$
+	y = a^{kx}
+$$
+Where $k$ is the dilation factor from the y-axis.  This dialation affects the steepness of the graph, but does not affect the y-intercept or the asymptote.
 
 \end{document}
