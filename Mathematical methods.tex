@@ -1,8 +1,8 @@
-\documentclass[a4paper,10pt]{report}
+\documentclass{report}
 \usepackage{mathalpha}
 \usepackage[utf8]{inputenc}
 \usepackage{cancel}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=2cm, a4paper,]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -10,9 +10,9 @@
 
 \graphicspath{ {./images/} }
 
-% User defined environments\
-% \newenvironment{description}{}{}
-\newenvironment{example}{As an example:\\}{}
+% User defined environments
+\newenvironment{desc}{\begin{center}}{\end{center}}
+\newenvironment{Example}{As an example:\\}{}
 
 % Title Page
 \title{Mathematical methods}
@@ -41,18 +41,31 @@
 
 \pagebreak
 
+\chapter{Unit 1}
 \section{Arithmetic sequence}
-An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.  The recursive definition of a sequence is:
-$$t_{n + 1} = t_n + d$$
-where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by"\\
+\begin{desc}
+	An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
+\end{desc}
+\subsection{Recursive definition}
+The recursive definition of an arithmetic sequence is:
+$$
+	t_{n + 1} = t_n + d
+$$
+where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by"
 
-And the general equation for finding the $n^{\text{th}}$ term of the sequence is:
-$$t_n = t_1 + (n - 1)d$$
-$t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
+\subsection{General equation}
+The general equation for finding the $n^{\text{th}}$ term of the sequence is:
+$$
+	t_n = t_1 + (n - 1)d
+$$
+Where $t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
 
 \subsection{Sum of all prior arithmetic sequence}
 The sum of all arithmetic sequence is given by:
-$$S_n = \frac{n}{2}(2t_1 + (n - 1)d) = \frac{n}{2}(t_1 + t_n)$$
+$$
+	S_n = \frac{n}{2}(2t_1 + (n - 1)d) = \frac{n}{2}(t_1 + t_n)
+$$
+Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
 
 \section{Functions}
 Functions is an mathematical concept where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be used.  A simple function which calculates the y-values along a parabola with the x-coordinates as input could be:
@@ -771,6 +784,7 @@ $$
 $$
 Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the initial investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
 
+\chapter{Unit 2}
 \section{Exponential functions}
 An exponential function increases or decreases at an accelerating rate, they have an asymptotes, a line which it approaches but never reach, and intersect the y-axis at point $(0, 1)$.  The general form of an exponential function equation is:
 $$
@@ -779,12 +793,14 @@ $$
 Where positive $a$ values increases exponentially, and negative $a$ approaches the asymptote as the x-value increases.
 
 \subsection{Translations}
+\subsubsection{x-axis}
 To translate the exponential function along the x-axis, use the formula:
 $$
 	y = a^{x - c}
 $$
 Where $c$ is the translation along the x-axis.\\
 
+\subsubsection{y-axis}
 To translate the exponential function along the y-axis, use the formula:
 $$
 	y = a^x + d
@@ -792,16 +808,40 @@ $$
 Where $d$ is the translation along the y-axis.
 
 \subsection{Dilations}
+\subsubsection{x-axis}
 To dilate the exponential function from the x-axis, use the formula:
 $$
 	y = b \times a^x
 $$
 Where $b$ is the dialation factor from the y-axis.  This dialation affects the y-intercept, but the asymptote stays at $y = 0$\\
 
+\subsubsection{y-axis}
 To dilate the exponential function from the y-axis, use the formula:
 $$
 	y = a^{kx}
 $$
 Where $k$ is the dilation factor from the y-axis.  This dialation affects the steepness of the graph, but does not affect the y-intercept or the asymptote.
+
+\section{Logarithms}
+A logarithm is:
+$$
+	(y = a^x) = (x = \log_ay)
+$$
+Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a > 0$ and $a \not = 1$
+
+\subsection{Laws}
+\begin{center}
+	\begin{tabular}{c|c|c}
+		Name                     & Rule                                      & Restrictions                        \\ \hline
+		Logarithms of a product  & $\log_a(mn) = \log_am + \log_an$          & $[m, n > 0], [a > 0], [a \not = 1]$ \\
+		Logarithms of a quotient & $\log_a(\frac{m}{n}) = \log_am - \log_an$ & $[m, n > 0], [a > 0], [a \not = 1]$ \\
+		Logarithms of a power    & $\log_am^n = n\log_am$                    & $[m > 0], [a > 0], [a \not = 1]$    \\
+		Logarithms of the base   & $\log_aa = 1$                             & $[a > 0], [a \not = 1]$             \\
+		Logarithm of one         & $\log_a 1 = 0$                            & $[a > 0], [a \not = 1]$
+	\end{tabular}
+\end{center}
+
+\subsection{The graph}
+
 
 \end{document}
