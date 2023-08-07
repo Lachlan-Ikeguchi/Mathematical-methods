@@ -1,30 +1,33 @@
-\documentclass{report}
+\documentclass{book}
 \usepackage{mathalpha}
 \usepackage[utf8]{inputenc}
 \usepackage{cancel}
-\usepackage[margin=2cm, a4paper,]{geometry}
+\usepackage[margin=2cm, a4paper]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{gensymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{pgfplots}
 
 \graphicspath{ {./images/} }
-
-% User defined environments
-\newenvironment{desc}{\begin{center}}{\end{center}}
-\newenvironment{Example}{As an example:\\}{}
+\newcommand{\rad}{^{c}}
+\newenvironment{note}{\begin{center}\em NOTE:\\}{\end{center}}
 
 % Title Page
 \title{Mathematical methods}
 \author{Lachlan Takumi Ikeguchi}
 
+\pgfplotsset{width=7cm,compat=1.18}
+%\usepgfplotslibrary{external}
+%\tikzexternalize[prefix=images/]
+
 \begin{document}
 \maketitle
 \tableofcontents
 
-\begin{abstract}
-	This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, feedback, and further explanations, contact lachlanprivate@duck.com or through the discord server: https://discord.gg/6P8rddkXFr .  I encourage you to let me know of any topic I missed, how I could explain it better, or how it could be reworded or formatted to be more helpful in it's purpose.  The goal of this document is to be a comprehensive summary of everything you need to know.
-\end{abstract}
+\section{The purpose}
+This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, feedback, and further explanations, contact lachlanprivate@duck.com or through the discord server: \url{https://discord.gg/6P8rddkXFr}. I encourage you to let me know of any topic I missed, how I could explain it better, or how it could be reworded or formatted to be more helpful in it's purpose.  The goal of this document is to be a comprehensive summary of everything you need to know.
 
 \section{Important symbols}
 \begin{center}
@@ -39,37 +42,37 @@
 	\end{tabular}
 \end{center}
 
-\pagebreak
+\chapter{Arithmetic sequence}
 
-\chapter{Unit 1}
-\section{Arithmetic sequence}
-\begin{desc}
-	An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
-\end{desc}
-\subsection{Recursive definition}
+An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
+
+\section{Recursive definition}
 The recursive definition of an arithmetic sequence is:
-$$
+\[
 	t_{n + 1} = t_n + d
-$$
+\]
+
 where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by"
 
-\subsection{General equation}
+\section{General equation}
 The general equation for finding the $n^{\text{th}}$ term of the sequence is:
-$$
+\[
 	t_n = t_1 + (n - 1)d
-$$
+\]
 Where $t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
 
-\subsection{Sum of all prior arithmetic sequence}
+\section{Sum of all prior arithmetic sequence}
 The sum of all arithmetic sequence is given by:
-$$
+\[
 	S_n = \frac{n}{2}(2t_1 + (n - 1)d) = \frac{n}{2}(t_1 + t_n)
-$$
+\]
 Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
 
-\section{Functions}
+\chapter{Functions}
 Functions is an mathematical concept where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be used.  A simple function which calculates the y-values along a parabola with the x-coordinates as input could be:
-$$M(x) = x^2$$
+\[
+	M(x) = x^2
+\]
 
 This function would return the values:
 \begin{center}
@@ -89,115 +92,116 @@ Functions can only give an one-to-one relation or a many-to-one relation since t
 
 If the graph intersects any vertical line more than once, it cannot be a function, and is instead a relation.
 
-\section{Interval notation}
+\chapter{Interval notation}
 Interval notation are used to define the range of a function or a relation.  For example, if given a function where the y-values start at 0 and approach but never reach 1, to define the range of the function, it would be $0 \leq y < 1$.  However, this can be rewritten using interval notation as: [0, 1).  The square bracket meaning that it is equal to and less than or greater than, and the parenthesis meaning that it is greater than or less than but never reaching the value.\\
 
-\begin{center}
-	\emph{NOTE:  it is called a ``range" when it is the y-value, and a ``domain" when it is the x-value}
-\end{center}
+\begin{note}
+	it is called a ``range" when it is the y-value, and a ``domain" when it is the x-value
+\end{note}
 
-\section{Relations and Functions}
+\chapter{Relations and Functions}
 There are four types of relations, relations meaning for any x-value, how many valid y-values there are.  The four are: one-to-one, many-to-one, one-to-many, and many-to-many.\\
 
 The first, (one-to-one) relation means that for any x-values, there is only one y-value.  An example would be a straight line: $f(x) = 2x + 3$.  The second, (many-to-one) relation means that for any y-values, there are more than one x-value.  An example would be a parabola: $f(x) = x^2$.  The previous are examples of functions, the next two are not.  The third, (one-to-many) relations means that for any x-value, there are more than one y-value.  And for the last, (many-to-many) relations means that for any x-value, there are more than one y-value, and the reverse is also true.
 
-\section{Transformations}
+\chapter{Transformations}
 The ways a function can be transformed by some units are:
-$$
+\[
 	y = a \times f(b(x - c)) + d
-$$
-Where $a$ is the dialation from the x-axis, $b$ is the dialation from the y-axis, $c$ is the translation along the x-axis, and $d$ is the translation along the y-axis.
+\]
 
-\subsection{Dialations}
-A dialation transformation means that the function has been either stretched or compressed.  These transformations occur when an output has been multiplied by a dialation factor.  Dialations can either occur in the x-axis or the y-axis.\\
+Where $a$ is the dilation from the x-axis, $b$ is the dilation from the y-axis, $c$ is the translation along the x-axis, and $d$ is the translation along the y-axis.
+
+\section{Dilations}
+A dilation transformation means that the function has been either stretched or compressed.  These transformations occur when an output has been multiplied by a dilation factor.  Dilations can either occur in the x-axis or the y-axis.\\
 Let y = f(x)\\
-When dialated from the x-axis by $a$:
-$$
+When dilated from the x-axis by $a$:
+\[
 	y = a \times f(x)
-$$
-When dialated from the y-axis by $b$:
-$$
+\]
+When dilated from the y-axis by $b$:
+\[
 	y = f(x \times b)
-$$
-\begin{center}
-	\emph{NOTE:  values less than 1 compresses the function and greater than 1 stretch it}
-\end{center}
+\]
+\begin{note}
+	values less than 1 compresses the function and greater than 1 stretch it
+\end{note}
 
-\subsection{Reflections}
+\section{Reflections}
 A reflection transformation means that the function has been flipped along an axis.\\
 To reflect a function along the x-axis:
-$$
+\[
 	y = -f(x)
-$$
+\]
 To reflect a function along the y-axis:
-$$
+\[
 	y = f(-x)
-$$
+\]
 
-\subsection{Translations}
+\section{Translations}
 A translation transformation means that the function has been shifted along an axis.\\
 To move the function along the x-axis by $c$ units:
-$$
+\[
 	y = f(x - c)
-$$
+\]
 To move the function along the y-axis by $d$ units:
-$$
+\[
 	y = f(x) + d
-$$
+\]
 
-\section{Peicewise functions}
-A peicewise function is a function that changes given some condition:\\
+\chapter{Piecewise functions}
+A piecewise function is a function that changes given some condition:\\
 As an example:
-$$
+\[
 	y = \begin{cases}
 		x  & x \geq 0 \\
 		-x & x < 0
 	\end{cases}
-$$
+\]
 This means as $x$ is equal to or greater than 0, $y$ is $x$, but if $x$ is less than 0, $y$ is $-x$
 
-\section{Quadratics}
-\subsection{General or polynomial form}
+\chapter{Quadratics}
+\section{General or polynomial form}
 The general or polynomial form of a quadratic is:
-$$
+\[
 	y = ax^2 + bx + c
-$$
-\begin{center}
-	\emph{NOTE: if $a > 0$ it looks like $\cup$ and $a < 0$ it looks like $\cap$}
-\end{center}
+\]
+\begin{note}
+	if $a > 0$ it looks like $\cup$ and $a < 0$ it looks like $\cap$
+\end{note}
 The axis of symmetry or the turning point is found by:
-$$
+\[
 	x = -\frac{b}{2a}
-$$
+\]
 
-\subsection{Turning point form}
+\section{Turning point form}
 The turning point form is:
-$$
+\[
 	y = a(x - b)^2 + c
-$$
+\]
 Where $b$ is the translation along the x-axis and $c$ is the translation along the y-axis.
 
-\subsection{Factorized or x-intercept form}
+\section{Factorized or x-intercept form}
 The factorized or x-intercept form is:
-$$
+\[
 	y = a(x - b)(x - c)
-$$
+\]
 Where it intercepts the x-axis at points $x = b$ and $x = c$
 
 And the axis of symmetry for this form is:
-$$
+\[
 	x = \frac{b + c}{2}
-$$
+\]
 
-\subsection{The discriminant}
+\section{The discriminant}
 The discriminant is:
-$$
+\[
 	\Delta = b^2 - 4ac
-$$
+\]
 From a part of the quadratic equation.\\
 If $\Delta < 0$, the quadratic has no real factors, $\Delta \geq 0$, the quadratic has 2 real factors, and if $\Delta = 0$, the quadratic is a perfect square and has only 1 real factor.  The number of x-intercepts is equal to the number of factors.
 
-\subsection{Equations from graphs}
+\section{Equations from graphs}
 If given the turning point, use the turning point form and substitute the coordinates into $b$ and $c$.  And if given the x-intercepts, use the x-intercept form and substitute the values $b$ and $c$.  While if given 3 points along the curve, use the general form by:\\
 \begin{center}
 	Given 3 points: $(0, 11), (1, 5), (2, 3)$\\
@@ -239,8 +243,8 @@ If given the turning point, use the turning point form and substitute the coordi
 	$\therefore a = 2, b = -8, c = 11$
 \end{center}
 
-\subsection{Solving quadratic equations}
-\subsubsection{Null factor law}
+\section{Solving quadratic equations}
+\subsection{Null factor law}
 The null factor law means that if $A \times B = 0$ at least $A$ or $B$ must equal 0.
 To use the null factor law to calculate the unknowns, factorize the quadratic:
 \begin{center}
@@ -271,17 +275,17 @@ If the leading coefficient is not 1:
 	\end{align*}
 \end{center}
 
-\subsubsection{Quadratic equation}
+\subsection{Quadratic equation}
 To solve using the quadratic equation, substitute $a$, $b$, and $c$ of the general form into the equation:
-$$
+\[
 	x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
+\]
 
-\subsubsection{Completing the square}
+\subsection{Completing the square}
 To solve using completing the square, rearrange the equation so that it is in the form:
-$$
+\[
 	x^2 - 2ax + a^2 = (x - a)^2
-$$
+\]
 Example:
 \begin{center}
 	\begin{align*}
@@ -306,95 +310,95 @@ Example:
 	\end{align*}
 \end{center}
 
-\section{Factorizing}
-\subsection{Perfect squares}
+\chapter{Factorizing}
+\section{Perfect squares}
 A perfect square follows the formula:
-$$
+\[
 	(a + b)^2 = a^2 + 2ab + b^2
-$$
+\]
 And
-$$
+\[
 	(a - b)^2 = a^2 - 2ab + b^2
-$$
+\]
 
-\subsection{Difference of squares}
+\section{Difference of squares}
 A difference of squares follows the formula:
-$$
+\[
 	a^2 - b^2 = (a + b)(a - b)
-$$
+\]
 
-\subsection{Equations that reduce to quadratic form}
+\section{Equations that reduce to quadratic form}
 If given: $ax^4 + bx^2 + c = 0$, $x^2$ could be substituted for $u$, therefore: $au^2 + bu + c = 0$ then solve for $u$.
 
-\section{Hyperbolas}
+\chapter{Hyperbolas}
 The basic equation of a hyperbola is:
-$$
+\[
 	y = \frac{1}{x}
-$$
+\]
 
 The lines $x = 0$ and $y = 0$ are asymptotes, which is a line that the function will approach but never reach.\\
 
 The general equation of a hyperbola is:
-$$
+\[
 	y = \frac{a}{x - c} + d
-$$
-Where $c$ is the vertical asymtote, $d$ is the horizontal asymtote, and $a$ is the dialation factor.
+\]
+Where $c$ is the vertical asymptote, $d$ is the horizontal asymptote, and $a$ is the dilation factor.
 
-\subsection{Transformations}
-\subsubsection{Dialation}
-A dialation transformation of a hyperbola is:
-$$
+\section{Transformations}
+\subsection{Dilation}
+A dilation transformation of a hyperbola is:
+\[
 	y = \frac{a}{x}
-$$
-Where $a$ is the dialation factor.
+\]
+Where $a$ is the dilation factor.
 
-\subsubsection{Translations}
+\subsection{Translations}
 To translate the hyperbola in the y-axis:
-$$
+\[
 	y = \frac{1}{x} + d
-$$
+\]
 Where $b$ is the translation along the y-axis.\\
 
 To translate the hyperbola in the x-axis:
-$$
+\[
 	y = \frac{1}{x - c}
-$$
+\]
 Where $c$ is the translation along the x-axis.\\
 
 To reflect the hyperbola it is:
-$$
+\[
 	y = -\frac{1}{x}
-$$
+\]
 
-\section{Inverse proportion}
+\chapter{Inverse proportion}
 An inversely proportional graph follows a hyperbolic relationship and is represented as:
-$$
+\[
 	y = \frac{k}{x}
-$$
+\]
 Where $k$ is the constant of proportionality.
 
-\section{Circles}
+\chapter{Circles}
 Circles are a relation as opposed to a function as it fails the vertical line test, and the equation of a circle is:
-$$
+\[
 	(x - a)^2 + (y - b)^2 = r^2
-$$
+\]
 Where $a$ is the x-component of the center point,  $b$ is the y-component, and $r$ is the radius.\\
 
 The general form of a circle is the expanded from of the above, and is:
-$$
+\[
 	x^2 + y^2 - 2ax - 2by + a^2 + b^2 -r^2 = 0
-$$
+\]
 
-\section{Sideways parabolas}
+\chapter{Sideways parabolas}
 While the equation of a parabola is: $y = x^2$, the equation of a sideways parabola is $y^2 = x$.\\
 
 The general form of this parabola is:
-$$
+\[
 	(y - d)^2 = a(x - c)
-$$
+\]
 With the vertex at coordinates $(c, d)$, $a < 0$ means that the parabola opens to the left, and $a > 0$ means it opens to the right.
 
-\section{Polynomials}
+\chapter{Polynomials}
 Polynomials are an algebraic expression with a positive integer power, such as:
 \begin{center}
 	$2x^2 - 7x + 2$,\\
@@ -403,20 +407,20 @@ Polynomials are an algebraic expression with a positive integer power, such as:
 	$3x^3 + 4$
 \end{center}
 The degree of a polynomial is the highest power, as an example, the above would be a 2\textsuperscript{nd} degree, 4\textsuperscript{th} degree, and 3\textsuperscript{rd} degree polynomials.  The leading term is the term containing the highest power, again: $2x^2$, $12x^4$, and $3x^3$.  And the constant term is the term that does not contain a variable: $2$, $8$, and $4$.  Polynomials are often shown in function notation:
-$$
+\[
 	P(x) := 2x^3 + 5x - 6
-$$
+\]
 
-\subsection{Division}
+\section{Division}
 To divide polynomials by hand, use the long division method shown here:
 \begin{center}
 	https://www.khanacademy.org/math/algebra-home/alg-polynomials/alg-long-division-of-polynomials/v/dividing-polynomials-1
 \end{center}
 
 The product of the division would be in the form:
-$$
+\[
 	\frac{\text{dividend}}{\text{divisor}} = \text{quotient} + \frac{\text{remainder}}{\text{divisor}}
-$$
+\]
 As an overview of what the terms mean:
 \begin{center}
 	\begin{tabular}{c|c}
@@ -428,7 +432,7 @@ As an overview of what the terms mean:
 	\end{tabular}
 \end{center}
 
-\subsection{Remainder theorem}
+\section{Remainder theorem}
 The remainder theorem is:
 \begin{center}
 	If a polynomial $P(x)$ is divided by $(x - a)$, then the remainder is $P(a)$.\\
@@ -448,27 +452,27 @@ To derive this theorem, consider:
 	\end{align*}
 \end{center}
 
-\subsection{Factor theorem}
+\section{Factor theorem}
 A factor of a value means that when the dividend is divided by the divisor, if the result does not produce a remainder, the divisor is a factor of the dividend.  As an example:\\
 We know that 4 is a factor of 12 because it divides 12 exactly into 3 with no remainders, likewise, if $\frac{P(x)}{x - a}$ leaves no remainder, it is a factor of the polynomial:\\
-$$
+\[
 	P(x) = (x - a) \times \text{quotient}
-$$
+\]
 Or:
 \begin{center}
 	If $P(x)$ is a polynomial and $P(a) = 0$ then $(x - a)$ is a factor of $P(x)$\\
 	And if $P(x)$ is a polynomial and $P(-\frac{b}{a}) = 0$ then $(ax - b)$ is a factor of $P(x)$
 \end{center}
 
-\subsection{Factorizing polynomials}
-To factorise a polynomial as a product of linear factors using polynomial division, divide the polynomial by the given factor to get a polynomial of a smaller degree, and factorise the quadratic.  As an example:\\
+\section{Factorizing polynomials}
+To factorize a polynomial as a product of linear factors using polynomial division, divide the polynomial by the given factor to get a polynomial of a smaller degree, and factorize the quadratic.  As an example:\\
 \begin{center}
 	Let $P(x) = 4x^3 + 19x^2 + 19x + 6$, and a known factor of $(x + 2)$
 	\begin{align*}
 		\frac{4x^3 + 19x^2 + 19x + 6}{(x + 2)} & = 4x^2 + 11x - 3          \\
 		P(x)                                   & = (x + 2)(4x^2 + 11x - 3)
 	\end{align*}
-	(factorise $4x^2 + 11x - 3$)
+	(factorize $4x^2 + 11x - 3$)
 	\begin{align*}
 		4x^2 + 11x - 3  & = (x + 3)(4x - 1)        \\
 		\therefore P(x) & = (x + 2)(x + 3)(4x - 1)
@@ -479,30 +483,30 @@ To factorise a polynomial as a product of linear factors using polynomial divisi
 	\emph{NOTE: if there is a missing factor such as: $ax^3 + cx + d$, just insert a $bx^2$ factor with $b = 0$}
 \end{center}
 
-\section{Probabilities}
-\subsection{Terms}
+\chapter{Probabilities}
+\section{Terms}
 The key terms of probability are: \emph{trial}, a result from something happening, \emph{outcome}, a result of a trial, \emph{sample space}; $\mathcal{E}$, is the set of all outcomes: $\mathcal{E}$ = \{1, 2, 3, 4, 5\}, \emph{event}, an outcome that we are looking for, and \emph{probability}, the relative frequency of an event from the set of all outcomes.  Probabilities begin at 0 and end at 1, 0 being impossible and 1 being certain.
 
 \begin{center}
 	\emph{NOTE: in a deck of cards, there are 52 cards, there are 4 suits of a heart or a diamond (which are red), and clubs and spades (which are black).  These suits all have an ace, 2, 3, 4 ... 10, a jack, a queen, and a king}
 \end{center}
 
-\subsection{Venn diagrams}
+\section{Venn diagrams}
 \begin{center}
 	\includegraphics[scale=0.5]{venn diagrams}
 \end{center}
 
-\subsection{Addition}
+\section{Addition}
 To add probabilities, use the formula:
-$$
+\[
 	P(A \cup B) = P(A) + P(B) - P(A \cap B)
-$$
+\]
 
 \begin{center}
 	\emph{NOTE: if the events $A$ and $B$ are mutually exclusive, i.e. if $A$ occurs, $B$ cannot possibly happen and vice versa, the addition formula becomes: $P(A \cup B) = P(A) + P(B)$}
 \end{center}
 
-\subsection{Probability tables}
+\section{Probability tables}
 Probability tables are a way to represent venn diagrams in a different format.
 \begin{center}
 	\begin{tabular}{c|c|c|c}
@@ -513,7 +517,7 @@ Probability tables are a way to represent venn diagrams in a different format.
 	\end{tabular}
 \end{center}
 
-\subsection{Tree diagrams}
+\section{Tree diagrams}
 Tree diagrams are used to show the tree of possible outcomes after each trial, as in, if a coin is flipped, it can either be heads or tails, and then a next trial, which could also be heads or tails:
 \begin{center}
 	\includegraphics[scale=0.5]{tree diagrams}
@@ -524,21 +528,21 @@ Tree diagrams can also be used to calculate probability by multiplying along the
 	\includegraphics[scale=0.5]{tree diagrams probability}
 \end{center}
 
-\subsection{Conditional probability}
+\section{Conditional probability}
 The notation of writing conditional probability is:
-$$
+\[
 	P(A|B)
-$$
+\]
 Where it means that the probability of $A$ given that ($|$) $B$ has occurred.\\
 
 To calculate the probability of an event, divide the sum of the events occurred over the sum of the sample space:
-$$
+\[
 	P(A) = \frac{n(A)}{n(\mathcal{E})}
-$$
+\]
 And
-$$
+\[
 	P(A \cap B) = \frac{n(A \cap B)}{N(\mathcal{E})}
-$$
+\]
 Similarly, to calculate the probability of an event given another event, change the sum of the sample space to be the sum of the first event:
 \begin{align*}
 	P(A|B) & = \frac{n(A \cap B)}{n(B)}                                         \\
@@ -548,25 +552,25 @@ Similarly, to calculate the probability of an event given another event, change 
 	P(A|B) & = \frac{P(A \cap B)}{P(B)}
 \end{align*}
 
-\subsection{Multiplication}
+\section{Multiplication}
 By rearranging the conditional probability formula, the $\cap$ probability formula can be found:
-$$
+\[
 	P(A \cap B) = P(A) \times P(B|A)
-$$
+\]
 
-\subsection{Independence}
+\section{Independence}
 An independent event is a event which does not change on another event occurring.  Independent events pass these tests:
 \begin{align*}
 	P(A|B) = P(A) \\
 	P(A \cap B) = P(A) \times P(B)
 \end{align*}
 
-\section{Addition principle}
+\chapter{Addition principle}
 If there are $n$ ways of performing operation $A$, and $m$ ways of performing operation $B$, there are $n + m$ ways of performing operation $A \cap B$.\\
 
 As in, let there be 2 ways to perform task $A$, and 3 ways to perform task $B$.  If there is an option to perform $A$ \emph{or} $B$, there is a total of $2 + 3 = 5$ ways to perform an operation.
 
-\section{Multiplication principle}
+\chapter{Multiplication principle}
 If there are $n$ ways of performing operation $A$, and $m$ ways of performing operation $B$, there are $n \times m$ ways of performing operation $A \cup B$.\\
 
 As in, let there be 4 ways to perform task $A$, and 5 ways to perform task $B$.  With considering 1 way to perform $A$, there are 5 ways to perform $B$, repeat the process through the number of ways to perform $A$.
@@ -581,33 +585,33 @@ As in, let there be 4 ways to perform task $A$, and 5 ways to perform task $B$. 
 \end{center}
 Where there are $4 \times 5 = 20$ ways to perform the operations.
 
-\section{Factorials}
+\chapter{Factorials}
 Factorials is the result of multiplying all of the integers between the given integer and 1.  This is given the notation and formula:
-$$
+\[
 	n! = n \times (n-1) \times (n-2) \times (n-3)... \times 3 \times 2 \times 1
-$$
+\]
 Example:\\
 \begin{align*}
 	5! & = 5 \times 4 \times 3 \times 2 \times 1 \\
 	   & = 120
 \end{align*}
 
-\subsection{Dividing factorials}
+\section{Dividing factorials}
 When given some factorial over another factorial in such cases as:
-$$\frac{4!}{2!}$$
-$$\frac{4 \times 3 \times 2 \times 1}{2 \times 1}$$
-$$\frac{4 \times 3 \times \cancel{2 \times 1}}{\cancel{2 \times 1}}$$
-$$4 \times 3$$
-$$12$$
+\[\frac{4!}{2!}\]
+\[\frac{4 \times 3 \times 2 \times 1}{2 \times 1}\]
+\[\frac{4 \times 3 \times \cancel{2 \times 1}}{\cancel{2 \times 1}}\]
+\[4 \times 3\]
+\[12\]
 
-\subsection{Special cases}
-$$0! = 1$$
+\section{Special cases}
+\[0! = 1\]
 
-\section{Permutations}
+\chapter{Permutations}
 Permutations is the number of ways of choosing $r$ things from $n$ distinct things where \emph{order matters}.  This is given the notation and formula:
-$$
+\[
 	^nP_r = \frac{n!}{(n-r)!}
-$$
+\]
 Example:\\
 \begin{align*}
 	^6P_4 & = \frac{6!}{(6 - 4)!}                                                                 \\
@@ -618,32 +622,32 @@ Example:\\
 	      & = 360
 \end{align*}
 
-\subsection{Permutations in a circle}
+\section{Permutations in a circle}
 In cases where the positions being concerned is a circle such as the permutations of a circular seating arrangement, if the standard permutations formula is applied, there are several over-counting of the like arrangement in a different perspective.  In these cases apply the formula:
-$$
+\[
 	\frac{^nP_r}{r} = \frac{\frac{n!}{(n-r)!}}{r}
-$$
+\]
 
-\subsection{Like objects repetitions}
+\section{Like objects repetitions}
 The number of ways of arranging $n$ objects made up of indistinguishable objects, $n_1$ in the first group, $n_2$ in the second group and so on, is:
-$$
+\[
 	\frac{n!}{n_1! n_2! n_3!... n_r!}
-$$
+\]
 Example:\\
 \begin{center}
 	Find the number of permutations of the letters in the world WOOLLOOMOOLOO.\\
 	There are 8 'O's and 3 'L's\\
 	Permutations:
-	$$\frac{13!}{8!3!}$$
-	$$\frac{13 \times 12 \times 11 \times 10 \times 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}{(8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1) \times (3 \times 2 \times 1)}$$
-	$$\frac{13 \times 12 \times 11 \times 10 \times 9 \cancel{\times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}}{\cancel{(8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1)} \times (3 \times 2 \times 1)}$$
-	$$\frac{13 \times 12 \times 11 \times 10 \times 9}{3 \times 2}$$
-	$$\frac{13 \times \cancelto{6 \cancel{\times 2}}{12} \times 11 \times 10 \times \cancelto{3 \cancel{\times 3}}{9}}{\cancel{3 \times 2}}$$
-	$$13 \times 6 \times 11 \times 10 \times 3$$
-	$$25,740$$
+	\[\frac{13!}{8!3!}\]
+	\[\frac{13 \times 12 \times 11 \times 10 \times 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}{(8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1) \times (3 \times 2 \times 1)}\]
+	\[\frac{13 \times 12 \times 11 \times 10 \times 9 \cancel{\times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}}{\cancel{(8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1)} \times (3 \times 2 \times 1)}\]
+	\[\frac{13 \times 12 \times 11 \times 10 \times 9}{3 \times 2}\]
+	\[\frac{13 \times \cancelto{6 \cancel{\times 2}}{12} \times 11 \times 10 \times \cancelto{3 \cancel{\times 3}}{9}}{\cancel{3 \times 2}}\]
+	\[13 \times 6 \times 11 \times 10 \times 3\]
+	\[25,740\]
 \end{center}
 
-\subsection{Restrictions}
+\section{Restrictions}
 When considering restrictions, deal with the restrictions first.\\
 Example:\\
 \begin{center}
@@ -653,13 +657,13 @@ Example:\\
 	Beginning and end must be a vowel, so the available positions are decreased by 2: number of positions - 2 = 4\\
 	Since 2 vowels must be used:  number of letters - 2 = 4\\
 	Permutations:
-	$$^4P_4$$
-	$$4!$$
-	$$4 \times 3 \times 2 \times 1$$
-	$$24$$
+	\[^4P_4\]
+	\[4!\]
+	\[4 \times 3 \times 2 \times 1\]
+	\[24\]
 \end{center}
 
-\subsection{Grouped items}
+\section{Grouped items}
 When items are grouped together, treat each group as a single object.  Find the number of arrangements of the groups, then multiply by the number of arrangement within each group.\\
 Example:\\
 \begin{center}
@@ -669,25 +673,25 @@ Example:\\
 	Number of positions = 6\\
 	As the 3 vowels are grouped together, the number of positions decreases:\\ number of positions - 3\textsubscript{for the members of the group} + 1\textsubscript{for the group} = 4\\
 	Permutations within vowel group:
-	$$^3P_3 = 3! = 3 \times 2 = 6$$
+	\[^3P_3 = 3! = 3 \times 2 = 6\]
 	Permutations of all positions:
-	$$^4P_4 = 4! = 4 \times 3 \times 2 = 24$$
+	\[^4P_4 = 4! = 4 \times 3 \times 2 = 24\]
 	Multiply together:
-	$$6 \times 24 = 144$$
+	\[6 \times 24 = 144\]
 \end{center}
 
-\subsection{Special cases}
-$$^nP_n = n!$$
-$$^nP_0 = 1$$
+\section{Special cases}
+\[^nP_n = n!\]
+\[^nP_0 = 1\]
 
-\section{Combinations}
+\chapter{Combinations}
 Combinations is the number of ways of choosing or selecting $r$ objects from $n$ distinct objects where \emph{order does not matter}.  This is given the notation and formula:
-$$^nC_r = \frac{^nP_r}{r!}$$
-$$^nC_r = \frac{\frac{n!}{(n-r)!}}{r!}$$
+\[^nC_r = \frac{^nP_r}{r!}\]
+\[^nC_r = \frac{\frac{n!}{(n-r)!}}{r!}\]
 Or
-$$
+\[
 	\binom{n}{r}
-$$
+\]
 Example:\\
 \begin{align*}
 	^4C_2 & = \frac{^4P_2}{2!}                                          \\
@@ -700,7 +704,7 @@ Example:\\
 	      & = 6                                                         \\
 \end{align*}
 
-\section{Pascal's triangle}
+\chapter{Pascal's triangle}
 The Pascal's triangle is a pattern formed by adding the top 2 adjacent numbers and a 1 is placed on either side of the bottom row to resemble a triangle:
 \begin{center}
 	\begin{tabular}{rccccccccccccccccccccc}
@@ -718,7 +722,7 @@ The Pascal's triangle is a pattern formed by adding the top 2 adjacent numbers a
 	\end{tabular}
 \end{center}
 
-Each element in the Pascal's triangle can be used to calculate combinations, hence, the triangle can be written using Combinations notation ($^nC_r$):
+Each element in the Pascal's triangle can be used to calculate combinations, hence, the triangle can be written using Combinations notation ($^{n}C_r$):
 \begin{center}
 	\begin{tabular}{rcccccccccccccccc}
 		$n=0$: &  &  &  &  &  &         &         &         &         &         & $^0C_0$                                                   \\ \noalign{\smallskip\smallskip}
@@ -731,7 +735,7 @@ Each element in the Pascal's triangle can be used to calculate combinations, hen
 \end{center}
 
 Pascal's triangle shows that the $r^\text{th}$ element of the $n^\text{th}$ row of Pascal's triangle is given by $^nC_r$.  It is assumed that the 1 at the beginning of each row is the $0^\text{th}$ element.  This gives the \emph{Pascal's identity}:
-$$^nC_r = ^{n-1}C_{r-1} + ^{n-1}C_r \text{ for } 0 < r < n$$
+\[^nC_r = ^{n-1}C_{r-1} + ^{n-1}C_r \text{ for } 0 < r < n\]
 
 The Pascal's triangle can be extended to the binomial theorem, where the rule for expanding an expression such as $(a + b)^n$.  Where:
 \begin{align*}
@@ -743,7 +747,7 @@ The Pascal's triangle can be extended to the binomial theorem, where the rule fo
 	(a + b)^5 & = 1a^5b^0 + 5a^4b^1 + 10a^3b^2 + 10a^2b^3 + 5a^1b^4 + 1a^0b^5
 \end{align*}
 
-\section{Index laws}
+\chapter{Index laws}
 \begin{center}
 	\begin{tabular}{c|c}
 		Name                 & Meaning                                             \\ \hline
@@ -756,80 +760,79 @@ The Pascal's triangle can be extended to the binomial theorem, where the rule fo
 	\end{tabular}
 \end{center}
 
-\section{Geometric sequences}
+\chapter{Geometric sequences}
 Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
-$$
+\[
 	t_n = t_1 \times r^{n - 1}
-$$
+\]
 Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the n\textsuperscript{th} term, and $t_1$ is the first term.\\
 And the recursive definition is:
-$$
+\[
 	t_{n + 1} = r \times t_n
-$$
+\]
 The sum of the first n\textsuperscript{th} terms of a geometric sequence is:
-$$
+\[
 	S_n = t_1 \times \frac{r^n - 1}{r - 1}
-$$
+\]
 And the sum of an infinite geometric sequence is:
-$$
+\[
 	S_{\infty} = \frac{t_1}{1 - r}
-$$
+\]
 \begin{center}
 	\emph{NOTE: This equation only provides a non-infinite solution where $-1 < r < 1$}
 \end{center}
 
 Compound interest is:
-$$
+\[
 	A = (1 + r)^n \times P
-$$
+\]
 Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the initial investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
 
-\chapter{Unit 2}
-\section{Exponential functions}
+\chapter{Exponential functions}
 An exponential function increases or decreases at an accelerating rate, they have an asymptotes, a line which it approaches but never reach, and intersect the y-axis at point $(0, 1)$.  The general form of an exponential function equation is:
-$$
+\[
 	y = a^x
-$$
+\]
 Where positive $a$ values increases exponentially, and negative $a$ approaches the asymptote as the x-value increases.
 
-\subsection{Translations}
-\subsubsection{x-axis}
+\chapter{Translations}
+\section{x-axis}
 To translate the exponential function along the x-axis, use the formula:
-$$
+\[
 	y = a^{x - c}
-$$
+\]
 Where $c$ is the translation along the x-axis.\\
 
-\subsubsection{y-axis}
+\section{y-axis}
 To translate the exponential function along the y-axis, use the formula:
-$$
+\[
 	y = a^x + d
-$$
+\]
 Where $d$ is the translation along the y-axis.
 
-\subsection{Dilations}
-\subsubsection{x-axis}
+\chapter{Dilations}
+\section{x-axis}
 To dilate the exponential function from the x-axis, use the formula:
-$$
+\[
 	y = b \times a^x
-$$
-Where $b$ is the dialation factor from the y-axis.  This dialation affects the y-intercept, but the asymptote stays at $y = 0$\\
+\]
+Where $b$ is the dilation factor from the y-axis.  This dilation affects the y-intercept, but the asymptote stays at $y = 0$\\
 
-\subsubsection{y-axis}
+\section{y-axis}
 To dilate the exponential function from the y-axis, use the formula:
-$$
+\[
 	y = a^{kx}
-$$
-Where $k$ is the dilation factor from the y-axis.  This dialation affects the steepness of the graph, but does not affect the y-intercept or the asymptote.
+\]
+Where $k$ is the dilation factor from the y-axis.  This dilation affects the steepness of the graph, but does not affect the y-intercept or the asymptote.
 
-\section{Logarithms}
+\chapter{Logarithms}
 A logarithm is:
-$$
+\[
 	(y = a^x) = (x = \log_ay)
-$$
+\]
 Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a > 0$ and $a \not = 1$
 
-\subsection{Laws}
+\chapter{Laws}
 \begin{center}
 	\begin{tabular}{c|c|c}
 		Name                     & Rule                                      & Restrictions                        \\ \hline
@@ -841,7 +844,85 @@ Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a 
 	\end{tabular}
 \end{center}
 
-\subsection{The graph}
+\chapter{The graph}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				axis lines = left,
+				xlabel = $x$,
+				ylabel = {$f(x)$},
+			]
+			\addplot [
+				domain=0.01:10,
+				samples=100,
+				color=red,
+			] {log10(x)};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\chapter{The change of base theorem}
+To change the base, apply the formula:
+\[
+	\log_{a}{(x)} = \frac{\log_{b}{(x)}}{\log_{b}{(a)}}
+\]
+As an example:
+\begin{align*}
+	\log_{5}25 & = \frac{\log_{10}25}{\log_{10}5} = \frac{1.39794}{0.69897} \approx 2 \\
+	\log_{2}8  & = \frac{\ln 8}{\ln 2} = \frac{2.07944}{0.69315} \approx 3            \\
+	\log_{3}81 & = \frac{\log_{10}81}{\log_{10}3} = \frac{1.90849}{0.47712} \approx 4
+\end{align*}
+
+\chapter{Trigonometric functions}
+\chapter{Radians and Degrees}
+
+Radians and degrees are two units used to measure angles.  One radian is defined as the angle formed when the length of an arc on a circle is equal to the radius of the circle. There are 2$\pi$ radians in a full circle, where $\pi$ is approximately equal to $3.14159$.\\
+
+Degrees, on the other hand, are based on the idea that a full circle contains $360\degree$. This means that one degree is equal to $\frac{1}{360}$ of a full circle.\\
+
+
+\section{Converting between radians and degrees}
+To convert between radians and degrees, we can use the following relationships:
+\[
+	1\rad = ({\frac{180}{\pi}})\degree
+\]
+and
+\[
+	1\degree = (\frac{\pi}{180})\rad
+\]
+
+
+To convert $45\degree$ to radians, use the second relationship:
+\begin{align*}
+	45\degree & = 45 \cdot (\frac{\pi}{180})\rad \\
+	          & = \frac{1}{4}\pi\rad
+\end{align*}
+To convert $\frac{1}{3}\pi$ radians to degrees, use the first relationship:
+\begin{align*}
+	\frac{1}{3}\pi\rad & = \frac{1}{3}\pi \cdot (\frac{180}{\pi})\degree \\
+	                   & = 60\degree
+\end{align*}
+
+\chapter{The unit circle}
+The unit circle is a circle with the centre point at origin, and has a radius of 1:
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				axis lines=middle,
+				axis equal,
+				xmin=-1.5, xmax=1.5,
+				ymin=-1.5, ymax=1.5,
+				xlabel=$x$, ylabel=$y$,
+			]
+			\addplot [domain=0:2*pi, samples=100, smooth] ({cos(deg(x))},{sin(deg(x))});
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+
+\chapter{Exact values}
+
+\chapter{Derivatives}
 
 
 \end{document}
