@@ -19,15 +19,15 @@
 \author{Lachlan Takumi Ikeguchi}
 
 \pgfplotsset{width=7cm,compat=1.18}
-%\usepgfplotslibrary{external}
-%\tikzexternalize[prefix=images/]
+% \usepgfplotslibrary{external}
+% \tikzexternalize[prefix=images/]
 
 \begin{document}
 \maketitle
 \tableofcontents
 
 \section{The purpose}
-This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, feedback, and further explanations, contact lachlanprivate@duck.com or through the discord server: \url{https://discord.gg/6P8rddkXFr}. I encourage you to let me know of any topic I missed, how I could explain it better, or how it could be reworded or formatted to be more helpful in it's purpose.  The goal of this document is to be a comprehensive summary of everything you need to know.
+This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, feedback, and further explanations, contact lachlanprivate@duck.com or through the discord server: \url{https://discord.gg/6P8rddkXFr}. I encourage you to let me know of any topic I missed, how I could explain it better, or how it could be reworded or formatted to be more helpful in its purpose.  The goal of this document is to be a comprehensive summary of everything you need to know.
 
 \section{Important symbols}
 \begin{center}
@@ -52,7 +52,7 @@ The recursive definition of an arithmetic sequence is:
 	t_{n + 1} = t_n + d
 \]
 
-where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by"
+Where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by".
 
 \section{General equation}
 The general equation for finding the $n^{\text{th}}$ term of the sequence is:
@@ -68,15 +68,16 @@ The sum of all arithmetic sequence is given by:
 \]
 Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
 
-\chapter{Functions}
-Functions is an mathematical concept where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be used.  A simple function which calculates the y-values along a parabola with the x-coordinates as input could be:
+\chapter{Functions and relations}
+\section{Functions}
+Functions is a mathematical concept where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be used.  A simple function which calculates the y-values along a parabola with the x-coordinates as input could be:
 \[
-	M(x) = x^2
+	M(x) := x^2
 \]
 
 This function would return the values:
 \begin{center}
-	\begin{tabular}{l|l}
+	\begin{tabular}{c|c}
 		$x$ & $M(x)$ \\ \hline
 		-3  & 9      \\
 		-2  & 4      \\
@@ -87,22 +88,125 @@ This function would return the values:
 		3   & 9
 	\end{tabular}
 \end{center}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				axis lines = left,
+				xlabel = $x$,
+				ylabel = $M(x)$
+			]
+			\addplot[
+				domain = -3:3,
+				samples = 7,
+			]{x^2};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
 
-Functions can only give an one-to-one relation or a many-to-one relation since there is a clear defined input and output values with the concept of a function.  To check if a graph is a function a \emph{vertical line test} can be performed:\\
+Functions can only give a one-to-one relation or a many-to-one relation since there is a clear defined input and output values with the concept of a function.  To check if a graph is a function a \emph{vertical line test} can be performed:
+\begin{center}
+	If the graph intersects any vertical line more than once, it cannot be a function, and is instead a relation.
+\end{center}
+\begin{center}
+	This is a function:
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					axis lines = left,
+					xlabel = $x$,
+					ylabel =  $y$
+				]
+				\addplot[
+					domain = -5:5,
+					samples = 100,
+					color = blue
+				]{7*x^3 - 19*x^2 + 3*x - 2};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{center}
+\begin{center}
+	This is not a function:
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					axis lines = left,
+					xlabel = $x$,
+					ylabel =  $y$
+				]
+				\addplot[
+					domain = -5:5,
+					samples = 100,
+					color = red
+				]({cos(deg(x))}, {sin(deg(x))});
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{center}
 
-If the graph intersects any vertical line more than once, it cannot be a function, and is instead a relation.
-
-\chapter{Interval notation}
-Interval notation are used to define the range of a function or a relation.  For example, if given a function where the y-values start at 0 and approach but never reach 1, to define the range of the function, it would be $0 \leq y < 1$.  However, this can be rewritten using interval notation as: [0, 1).  The square bracket meaning that it is equal to and less than or greater than, and the parenthesis meaning that it is greater than or less than but never reaching the value.\\
-
+\section{Interval notation}
+Interval notation are used to define the range of a function or a relation.  For example, if given a function where the y-values start at 0 and approach but never reach 1, to define the range of the function, it would be $0 \leq y < 1$.  However, this can be rewritten using interval notation as: [0, 1).  The square bracket meaning that it is $=$, $\geq$, and $\leq$, and the parenthesis meaning that it is $<$, or $>$ where it will never reach the value.\\
 \begin{note}
-	it is called a ``range" when it is the y-value, and a ``domain" when it is the x-value
+	It is called a ``range" when it is the y-value, and a ``domain" when it is the x-value.
 \end{note}
 
-\chapter{Relations and Functions}
+\section{Relations}
 There are four types of relations, relations meaning for any x-value, how many valid y-values there are.  The four are: one-to-one, many-to-one, one-to-many, and many-to-many.\\
 
-The first, (one-to-one) relation means that for any x-values, there is only one y-value.  An example would be a straight line: $f(x) = 2x + 3$.  The second, (many-to-one) relation means that for any y-values, there are more than one x-value.  An example would be a parabola: $f(x) = x^2$.  The previous are examples of functions, the next two are not.  The third, (one-to-many) relations means that for any x-value, there are more than one y-value.  And for the last, (many-to-many) relations means that for any x-value, there are more than one y-value, and the reverse is also true.
+The first, (one-to-one) relation means that for any x-values, there is only one y-value.  An example would be a straight line:
+\begin{center}
+	\[f(x) := 2x + 3\]
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}
+				\addplot[
+					domain = -5:5,
+					samples = 100,
+				]{2*x + 3};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{center}
+The second, (many-to-one) relation means that for any y-values, there are more than one x-value.  An example would be a parabola:
+\begin{center}
+	\[f(x) := x^2\]
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}
+				\addplot[
+					domain = -5:5,
+					samples = 100,
+				]{x^2};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{center}
+The previous are examples of functions, the next two are not.  The third, (one-to-many) relations means that for any x-value, there are more than one y-value, such as a hyperbola:
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}
+			\addplot[
+				domain = -5:5,
+				samples = 100,
+				contour gnuplot={labels=false,levels={1}}
+			]{(x+1)^2/4 - (y-2)^2/9};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+And for the last, (many-to-many) relations means that for any x-value, there are more than one y-value, and the reverse is also true, such as a circle:
+\begin{center}
+	\[1 = x^2 + y^2\]
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}
+				\addplot[
+					domain = -5:5,
+					samples = 100,
+				]({cos(deg(x))}, {sin(deg(x))});
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{center}
 
 \chapter{Transformations}
 The ways a function can be transformed by some units are:
@@ -158,7 +262,7 @@ As an example:
 		-x & x < 0
 	\end{cases}
 \]
-This means as $x$ is equal to or greater than 0, $y$ is $x$, but if $x$ is less than 0, $y$ is $-x$
+This means as $x$ is equal to or greater than 0, $y$ is $x$, but if $x$ is less than 0, $y$ is $-x$.
 
 \chapter{Quadratics}
 \section{General or polynomial form}
@@ -167,7 +271,38 @@ The general or polynomial form of a quadratic is:
 	y = ax^2 + bx + c
 \]
 \begin{note}
-	if $a > 0$ it looks like $\cup$ and $a < 0$ it looks like $\cap$
+	if $a > 0$ it looks like:
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					axis lines = left,
+					xlabel = $x$,
+					ylabel = {$f(ax)$},
+				]
+				\addplot [
+					domain=-1:1,
+					samples=100,
+					color=red,
+				] {x^2};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	And $a < 0$ it looks like:
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					axis lines = left,
+					xlabel = $x$,
+					ylabel = {$f(ax)$},
+				]
+				\addplot [
+					domain=-1:1,
+					samples=100,
+					color=red,
+				] {-(x^2)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
 \end{note}
 The axis of symmetry or the turning point is found by:
 \[
@@ -826,11 +961,11 @@ To dilate the exponential function from the y-axis, use the formula:
 Where $k$ is the dilation factor from the y-axis.  This dilation affects the steepness of the graph, but does not affect the y-intercept or the asymptote.
 
 \chapter{Logarithms}
-A logarithm is:
+A logarithm is defined as:
 \[
 	(y = a^x) = (x = \log_ay)
 \]
-Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a > 0$ and $a \not = 1$
+Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a > 0$ and $a \not = 1$.
 
 \chapter{Laws}
 \begin{center}
@@ -844,7 +979,7 @@ Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a 
 	\end{tabular}
 \end{center}
 
-\chapter{The graph}
+\section{The graph}
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -861,7 +996,7 @@ Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a 
 	\end{tikzpicture}
 \end{center}
 
-\chapter{The change of base theorem}
+\section{The change of base theorem}
 To change the base, apply the formula:
 \[
 	\log_{a}{(x)} = \frac{\log_{b}{(x)}}{\log_{b}{(a)}}
