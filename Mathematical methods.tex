@@ -9,6 +9,10 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{parskip}
+\usepackage{polynom}
+\usepackage{multirow}
 
 \graphicspath{ {./images/} }
 \newcommand{\rad}{^{c}}
@@ -29,24 +33,13 @@
 \section{The purpose}
 This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, feedback, and further explanations, contact lachlanprivate@duck.com or through the discord server: \url{https://discord.gg/6P8rddkXFr}. I encourage you to let me know of any topic I missed, how I could explain it better, or how it could be reworded or formatted to be more helpful in its purpose.  The goal of this document is to be a comprehensive summary of everything you need to know.
 
-\section{Important symbols}
-\begin{center}
-	\begin{tabular}{l|lp{6cm}}
-		Symbol         & Mathematical definition                                                  & Simple definition                                                                                              \\ \hline
-		$\cup$         & Union                                                                    & $A$ \emph{and} $B$, or think as in `add'.                                                                      \\
-		$\cap$         & Intersection                                                             & $A$ \emph{or} $B$, or think as in `multiply'.                                                                  \\
-		$n!$           & $n \times (n-1) \times (n-2) \times (n-3)... \times 3 \times 2 \times 1$ & The product of integers between the given value and 1.                                                         \\
-		$^nP_r$        & $\frac{n!}{(n-r)!}$                                                      & The number of combinations there are of length $r$ from a group of length $n$ where the order matters.         \\
-		$^nC_r$        & $\frac{n!}{(n-r)!r!}$                                                    & The number of combinations there are of length $r$ from a group of length $n$ where the order does not matter. \\
-		$\binom{n}{r}$ & $^nC_r$                                                                  & The same as the combinations but in a different notation.
-	\end{tabular}
-\end{center}
+\includepdf[pages=-]{./images/formula-book.pdf}
 
-\chapter{Arithmetic sequence}
-
+\chapter{Sequences}
+\section{Arithmetic sequences}
 An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
 
-\section{Recursive definition}
+\subsection{Recursive definition}
 The recursive definition of an arithmetic sequence is:
 \[
 	t_{n + 1} = t_n + d
@@ -54,19 +47,55 @@ The recursive definition of an arithmetic sequence is:
 
 Where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by".
 
-\section{General equation}
+\subsection{General equation}
 The general equation for finding the $n^{\text{th}}$ term of the sequence is:
 \[
 	t_n = t_1 + (n - 1)d
 \]
 Where $t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
 
-\section{Sum of all prior arithmetic sequence}
+\subsection{Sum of all prior arithmetic sequence}
 The sum of all arithmetic sequence is given by:
 \[
 	S_n = \frac{n}{2}(2t_1 + (n - 1)d) = \frac{n}{2}(t_1 + t_n)
 \]
 Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
+
+\section{Geometric sequences}
+\subsection{General equation}
+Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
+\[
+	t_n = t_1 \times r^{n - 1}
+\]
+Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the n\textsuperscript{th} term, and $t_1$ is the first term.
+
+\subsection{Recursive definition}
+The recursive definition is:
+\[
+	t_{n + 1} = r \times t_n
+\]
+
+\subsection{Sum}
+\subsubsection{Sum of $n$ geometric sequence}
+The sum of the first n\textsuperscript{th} terms of a geometric sequence is:
+\[
+	S_n = t_1 \times \frac{r^n - 1}{r - 1}
+\]
+
+\subsubsection{Sum of all geometric sequence}
+And the sum of an infinite geometric sequence is:
+\[
+	S_{\infty} = \frac{t_1}{1 - r}
+\]
+\begin{note}
+	This equation only provides a non-infinite solution where $-1 < r < 1$
+\end{note}
+
+Compound interest is:
+\[
+	A = (1 + r)^n \times P
+\]
+Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the initial investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
 
 \chapter{Functions and relations}
 \section{Functions}
@@ -74,34 +103,11 @@ Functions is a mathematical concept where if given an input, it performs some op
 \[
 	M(x) := x^2
 \]
-
-This function would return the values:
-\begin{center}
-	\begin{tabular}{c|c}
-		$x$ & $M(x)$ \\ \hline
-		-3  & 9      \\
-		-2  & 4      \\
-		-1  & 1      \\
-		0   & 0      \\
-		1   & 1      \\
-		2   & 4      \\
-		3   & 9
-	\end{tabular}
-\end{center}
-\begin{center}
-	\begin{tikzpicture}
-		\begin{axis}[
-				axis lines = left,
-				xlabel = $x$,
-				ylabel = $M(x)$
-			]
-			\addplot[
-				domain = -3:3,
-				samples = 7,
-			]{x^2};
-		\end{axis}
-	\end{tikzpicture}
-\end{center}
+\begin{align*}
+	M(x) & = x^2   \\
+	M(3) & = (3)^2 \\
+	M(3) & = 9
+\end{align*}
 
 Functions can only give a one-to-one relation or a many-to-one relation since there is a clear defined input and output values with the concept of a function.  To check if a graph is a function a \emph{vertical line test} can be performed:
 \begin{center}
@@ -151,7 +157,7 @@ Interval notation are used to define the range of a function or a relation.  For
 \end{note}
 
 \section{Relations}
-There are four types of relations, relations meaning for any x-value, how many valid y-values there are.  The four are: one-to-one, many-to-one, one-to-many, and many-to-many.\\
+There are four types of relations, relations meaning for any x-value, how many valid y-values there are.  The four are: one-to-one, many-to-one, one-to-many, and many-to-many.
 
 The first, (one-to-one) relation means that for any x-values, there is only one y-value.  An example would be a straight line:
 \begin{center}
@@ -185,11 +191,8 @@ The previous are examples of functions, the next two are not.  The third, (one-t
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}
-			\addplot[
-				domain = -5:5,
-				samples = 100,
-				contour gnuplot={labels=false,levels={1}}
-			]{(x+1)^2/4 - (y-2)^2/9};
+			\addplot [domain=-2:2,samples=100] ({cosh(x)}, {sinh(x)});
+			\addplot [domain=-2:2,samples=100] ({-cosh(x)}, {sinh(x)});
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
@@ -213,7 +216,6 @@ The ways a function can be transformed by some units are:
 \[
 	y = a \times f(b(x - c)) + d
 \]
-
 Where $a$ is the dilation from the x-axis, $b$ is the dilation from the y-axis, $c$ is the translation along the x-axis, and $d$ is the translation along the y-axis.
 
 \section{Dilations}
@@ -252,17 +254,6 @@ To move the function along the y-axis by $d$ units:
 \[
 	y = f(x) + d
 \]
-
-\chapter{Piecewise functions}
-A piecewise function is a function that changes given some condition:\\
-As an example:
-\[
-	y = \begin{cases}
-		x  & x \geq 0 \\
-		-x & x < 0
-	\end{cases}
-\]
-This means as $x$ is equal to or greater than 0, $y$ is $x$, but if $x$ is less than 0, $y$ is $-x$.
 
 \chapter{Quadratics}
 \section{General or polynomial form}
@@ -505,7 +496,7 @@ To reflect the hyperbola it is:
 	y = -\frac{1}{x}
 \]
 
-\chapter{Inverse proportion}
+\section{Inverse proportion}
 An inversely proportional graph follows a hyperbolic relationship and is represented as:
 \[
 	y = \frac{k}{x}
@@ -517,21 +508,12 @@ Circles are a relation as opposed to a function as it fails the vertical line te
 \[
 	(x - a)^2 + (y - b)^2 = r^2
 \]
-Where $a$ is the x-component of the center point,  $b$ is the y-component, and $r$ is the radius.\\
+Where $a$ is the x-component of the centre point,  $b$ is the y-component, and $r$ is the radius.\\
 
 The general form of a circle is the expanded from of the above, and is:
 \[
 	x^2 + y^2 - 2ax - 2by + a^2 + b^2 -r^2 = 0
 \]
-
-\chapter{Sideways parabolas}
-While the equation of a parabola is: $y = x^2$, the equation of a sideways parabola is $y^2 = x$.\\
-
-The general form of this parabola is:
-\[
-	(y - d)^2 = a(x - c)
-\]
-With the vertex at coordinates $(c, d)$, $a < 0$ means that the parabola opens to the left, and $a > 0$ means it opens to the right.
 
 \chapter{Polynomials}
 Polynomials are an algebraic expression with a positive integer power, such as:
@@ -549,8 +531,10 @@ The degree of a polynomial is the highest power, as an example, the above would 
 \section{Division}
 To divide polynomials by hand, use the long division method shown here:
 \begin{center}
-	https://www.khanacademy.org/math/algebra-home/alg-polynomials/alg-long-division-of-polynomials/v/dividing-polynomials-1
+	\polylongdiv{x^3 - 12x^2 - 42}{x - 3}
 \end{center}
+
+% TODO: step by step instuctions
 
 The product of the division would be in the form:
 \[
@@ -588,8 +572,9 @@ To derive this theorem, consider:
 \end{center}
 
 \section{Factor theorem}
-A factor of a value means that when the dividend is divided by the divisor, if the result does not produce a remainder, the divisor is a factor of the dividend.  As an example:\\
-We know that 4 is a factor of 12 because it divides 12 exactly into 3 with no remainders, likewise, if $\frac{P(x)}{x - a}$ leaves no remainder, it is a factor of the polynomial:\\
+A factor of a value means that when the dividend is divided by the divisor, if the result does not produce a remainder, the divisor is a factor of the dividend.  As an example:
+
+We know that 4 is a factor of 12 because it divides 12 exactly into 3 with no remainders, likewise, if $\frac{P(x)}{x - a}$ leaves no remainder, it is a factor of the polynomial:
 \[
 	P(x) = (x - a) \times \text{quotient}
 \]
@@ -600,7 +585,7 @@ Or:
 \end{center}
 
 \section{Factorizing polynomials}
-To factorize a polynomial as a product of linear factors using polynomial division, divide the polynomial by the given factor to get a polynomial of a smaller degree, and factorize the quadratic.  As an example:\\
+To factorize a polynomial as a product of linear factors using polynomial division, divide the polynomial by the given factor to get a polynomial of a smaller degree, and factorize the quadratic.
 \begin{center}
 	Let $P(x) = 4x^3 + 19x^2 + 19x + 6$, and a known factor of $(x + 2)$
 	\begin{align*}
@@ -614,17 +599,26 @@ To factorize a polynomial as a product of linear factors using polynomial divisi
 	\end{align*}
 \end{center}
 
-\begin{center}
-	\emph{NOTE: if there is a missing factor such as: $ax^3 + cx + d$, just insert a $bx^2$ factor with $b = 0$}
-\end{center}
+\begin{note}
+	if there is a missing factor such as: $ax^3 + cx + d$, just insert a $bx^2$ factor with $b = 0$
+\end{note}
 
 \chapter{Probabilities}
 \section{Terms}
-The key terms of probability are: \emph{trial}, a result from something happening, \emph{outcome}, a result of a trial, \emph{sample space}; $\mathcal{E}$, is the set of all outcomes: $\mathcal{E}$ = \{1, 2, 3, 4, 5\}, \emph{event}, an outcome that we are looking for, and \emph{probability}, the relative frequency of an event from the set of all outcomes.  Probabilities begin at 0 and end at 1, 0 being impossible and 1 being certain.
-
+The key terms of probability are:
 \begin{center}
-	\emph{NOTE: in a deck of cards, there are 52 cards, there are 4 suits of a heart or a diamond (which are red), and clubs and spades (which are black).  These suits all have an ace, 2, 3, 4 ... 10, a jack, a queen, and a king}
+	\begin{tabular}{c|p{8cm}}
+		Name                        & Meaning                                                                                                                                          \\ \hline
+		Trial                       & a result from something happening                                                                                                                \\
+		Outcome                     & a result of a trial                                                                                                                              \\
+		Sample space: $\mathcal{E}$ & the set of all outcomes: $\mathcal{E}$ = \{1, 2, 3, 4, 5\}                                                                                       \\
+		Event                       & an outcome that we are looking for                                                                                                               \\
+		Probability                 & the relative frequency of an event from the set of all outcomes.  Probabilities begin at 0 and end at 1, 0 being impossible and 1 being certain.
+	\end{tabular}
 \end{center}
+\begin{note}
+	in a deck of cards, there are 52 cards, there are 4 suits of a heart or a diamond (which are red), and clubs and spades (which are black).  These suits all have an ace, 2, 3, 4 ... 10, a jack, a queen, and a king
+\end{note}
 
 \section{Venn diagrams}
 \begin{center}
@@ -636,13 +630,12 @@ To add probabilities, use the formula:
 \[
 	P(A \cup B) = P(A) + P(B) - P(A \cap B)
 \]
-
-\begin{center}
-	\emph{NOTE: if the events $A$ and $B$ are mutually exclusive, i.e. if $A$ occurs, $B$ cannot possibly happen and vice versa, the addition formula becomes: $P(A \cup B) = P(A) + P(B)$}
-\end{center}
+\begin{note}
+	if the events $A$ and $B$ are mutually exclusive, i.e. if $A$ occurs, $B$ cannot possibly happen and vice versa, the addition formula becomes: $P(A \cup B) = P(A) + P(B)$
+\end{note}
 
 \section{Probability tables}
-Probability tables are a way to represent venn diagrams in a different format.
+Probability tables are a way to represent Venn diagrams in a different format.
 \begin{center}
 	\begin{tabular}{c|c|c|c}
 		    & B              & B'              & sum              \\ \hline
@@ -668,7 +661,7 @@ The notation of writing conditional probability is:
 \[
 	P(A|B)
 \]
-Where it means that the probability of $A$ given that ($|$) $B$ has occurred.\\
+Where it means that the probability of $A$ given that ($|$) $B$ has occurred.
 
 To calculate the probability of an event, divide the sum of the events occurred over the sum of the sample space:
 \[
@@ -700,13 +693,13 @@ An independent event is a event which does not change on another event occurring
 	P(A \cap B) = P(A) \times P(B)
 \end{align*}
 
-\chapter{Addition principle}
-If there are $n$ ways of performing operation $A$, and $m$ ways of performing operation $B$, there are $n + m$ ways of performing operation $A \cap B$.\\
+\section{Addition principle}
+If there are $n$ ways of performing operation $A$, and $m$ ways of performing operation $B$, there are $n + m$ ways of performing operation $A \cap B$.
 
 As in, let there be 2 ways to perform task $A$, and 3 ways to perform task $B$.  If there is an option to perform $A$ \emph{or} $B$, there is a total of $2 + 3 = 5$ ways to perform an operation.
 
-\chapter{Multiplication principle}
-If there are $n$ ways of performing operation $A$, and $m$ ways of performing operation $B$, there are $n \times m$ ways of performing operation $A \cup B$.\\
+\section{Multiplication principle}
+If there are $n$ ways of performing operation $A$, and $m$ ways of performing operation $B$, there are $n \times m$ ways of performing operation $A \cup B$.
 
 As in, let there be 4 ways to perform task $A$, and 5 ways to perform task $B$.  With considering 1 way to perform $A$, there are 5 ways to perform $B$, repeat the process through the number of ways to perform $A$.
 \begin{center}
@@ -747,7 +740,7 @@ Permutations is the number of ways of choosing $r$ things from $n$ distinct thin
 \[
 	^nP_r = \frac{n!}{(n-r)!}
 \]
-Example:\\
+Example:
 \begin{align*}
 	^6P_4 & = \frac{6!}{(6 - 4)!}                                                                 \\
 	      & = \frac{6!}{2!}                                                                       \\
@@ -768,7 +761,7 @@ The number of ways of arranging $n$ objects made up of indistinguishable objects
 \[
 	\frac{n!}{n_1! n_2! n_3!... n_r!}
 \]
-Example:\\
+Example:
 \begin{center}
 	Find the number of permutations of the letters in the world WOOLLOOMOOLOO.\\
 	There are 8 'O's and 3 'L's\\
@@ -783,14 +776,14 @@ Example:\\
 \end{center}
 
 \section{Restrictions}
-When considering restrictions, deal with the restrictions first.\\
-Example:\\
+When considering restrictions, deal with the restrictions first.
+Example:
 \begin{center}
-	Find the number of arrangements of the letters of the word DARWIN beginning and ending with a vowel.\\
-	Number of letters = 6\\
-	Number of positions = 6\\
-	Beginning and end must be a vowel, so the available positions are decreased by 2: number of positions - 2 = 4\\
-	Since 2 vowels must be used:  number of letters - 2 = 4\\
+	Find the number of arrangements of the letters of the word DARWIN beginning and ending with a vowel.
+	Number of letters = 6
+	Number of positions = 6
+	Beginning and end must be a vowel, so the available positions are decreased by 2: number of positions - 2 = 4
+	Since 2 vowels must be used:  number of letters - 2 = 4
 	Permutations:
 	\[^4P_4\]
 	\[4!\]
@@ -799,14 +792,15 @@ Example:\\
 \end{center}
 
 \section{Grouped items}
-When items are grouped together, treat each group as a single object.  Find the number of arrangements of the groups, then multiply by the number of arrangement within each group.\\
-Example:\\
+When items are grouped together, treat each group as a single object.  Find the number of arrangements of the groups, then multiply by the number of arrangement within each group.
+Example:
 \begin{center}
-	Find the number of arrangement of the letters of the word EQUALS if the vowels are kept together.\\
-	Number of vowels = 3\\
-	Number of letters = 6\\
-	Number of positions = 6\\
-	As the 3 vowels are grouped together, the number of positions decreases:\\ number of positions - 3\textsubscript{for the members of the group} + 1\textsubscript{for the group} = 4\\
+	Find the number of arrangement of the letters of the word EQUALS if the vowels are kept together.
+	Number of vowels = 3
+	Number of letters = 6
+	Number of positions = 6
+	As the 3 vowels are grouped together, the number of positions decreases:
+	number of positions - 3\textsubscript{for the members of the group} + 1\textsubscript{for the group} = 4
 	Permutations within vowel group:
 	\[^3P_3 = 3! = 3 \times 2 = 6\]
 	Permutations of all positions:
@@ -827,7 +821,7 @@ Or
 \[
 	\binom{n}{r}
 \]
-Example:\\
+Example:
 \begin{align*}
 	^4C_2 & = \frac{^4P_2}{2!}                                          \\
 	      & = \frac{\frac{4!}{(4 - 2)!}}{2!}                            \\
@@ -839,7 +833,7 @@ Example:\\
 	      & = 6                                                         \\
 \end{align*}
 
-\chapter{Pascal's triangle}
+\section{Pascal's triangle}
 The Pascal's triangle is a pattern formed by adding the top 2 adjacent numbers and a 1 is placed on either side of the bottom row to resemble a triangle:
 \begin{center}
 	\begin{tabular}{rccccccccccccccccccccc}
@@ -895,65 +889,37 @@ The Pascal's triangle can be extended to the binomial theorem, where the rule fo
 	\end{tabular}
 \end{center}
 
-\chapter{Geometric sequences}
-Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
-\[
-	t_n = t_1 \times r^{n - 1}
-\]
-Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the n\textsuperscript{th} term, and $t_1$ is the first term.\\
-And the recursive definition is:
-\[
-	t_{n + 1} = r \times t_n
-\]
-The sum of the first n\textsuperscript{th} terms of a geometric sequence is:
-\[
-	S_n = t_1 \times \frac{r^n - 1}{r - 1}
-\]
-And the sum of an infinite geometric sequence is:
-\[
-	S_{\infty} = \frac{t_1}{1 - r}
-\]
-\begin{center}
-	\emph{NOTE: This equation only provides a non-infinite solution where $-1 < r < 1$}
-\end{center}
-
-Compound interest is:
-\[
-	A = (1 + r)^n \times P
-\]
-Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the initial investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
-
 \chapter{Exponential functions}
-An exponential function increases or decreases at an accelerating rate, they have an asymptotes, a line which it approaches but never reach, and intersect the y-axis at point $(0, 1)$.  The general form of an exponential function equation is:
+An exponential function increases or decreases at an accelerating rate, they have an asymptote, a line which it approaches but never reach, and intersect the y-axis at point $(0, 1)$.  The general form of an exponential function equation is:
 \[
 	y = a^x
 \]
 Where positive $a$ values increases exponentially, and negative $a$ approaches the asymptote as the x-value increases.
 
-\chapter{Translations}
-\section{x-axis}
+\section{Translations}
+\subsection{x-axis}
 To translate the exponential function along the x-axis, use the formula:
 \[
 	y = a^{x - c}
 \]
 Where $c$ is the translation along the x-axis.\\
 
-\section{y-axis}
+\subsection{y-axis}
 To translate the exponential function along the y-axis, use the formula:
 \[
 	y = a^x + d
 \]
 Where $d$ is the translation along the y-axis.
 
-\chapter{Dilations}
-\section{x-axis}
+\section{Dilations}
+\subsection{x-axis}
 To dilate the exponential function from the x-axis, use the formula:
 \[
 	y = b \times a^x
 \]
 Where $b$ is the dilation factor from the y-axis.  This dilation affects the y-intercept, but the asymptote stays at $y = 0$\\
 
-\section{y-axis}
+\subsection{y-axis}
 To dilate the exponential function from the y-axis, use the formula:
 \[
 	y = a^{kx}
@@ -965,21 +931,6 @@ A logarithm is defined as:
 \[
 	(y = a^x) = (x = \log_ay)
 \]
-Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a > 0$ and $a \not = 1$.
-
-\chapter{Laws}
-\begin{center}
-	\begin{tabular}{c|c|c}
-		Name                     & Rule                                      & Restrictions                        \\ \hline
-		Logarithms of a product  & $\log_a(mn) = \log_am + \log_an$          & $[m, n > 0], [a > 0], [a \not = 1]$ \\
-		Logarithms of a quotient & $\log_a(\frac{m}{n}) = \log_am - \log_an$ & $[m, n > 0], [a > 0], [a \not = 1]$ \\
-		Logarithms of a power    & $\log_am^n = n\log_am$                    & $[m > 0], [a > 0], [a \not = 1]$    \\
-		Logarithms of the base   & $\log_aa = 1$                             & $[a > 0], [a \not = 1]$             \\
-		Logarithm of one         & $\log_a 1 = 0$                            & $[a > 0], [a \not = 1]$
-	\end{tabular}
-\end{center}
-
-\section{The graph}
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -995,6 +946,19 @@ Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a 
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
+Where $y$ is the base numeral, $a$ is the base, and $x$ is the logarithm for $a > 0$ and $a \not = 1$.
+
+\section{Laws}
+\begin{center}
+	\begin{tabular}{c|c|c}
+		Name                     & Rule                                      & Restrictions                        \\ \hline
+		Logarithms of a product  & $\log_a(mn) = \log_am + \log_an$          & $[m, n > 0], [a > 0], [a \not = 1]$ \\
+		Logarithms of a quotient & $\log_a(\frac{m}{n}) = \log_am - \log_an$ & $[m, n > 0], [a > 0], [a \not = 1]$ \\
+		Logarithms of a power    & $\log_am^n = n\log_am$                    & $[m > 0], [a > 0], [a \not = 1]$    \\
+		Logarithms of the base   & $\log_aa = 1$                             & $[a > 0], [a \not = 1]$             \\
+		Logarithm of one         & $\log_a 1 = 0$                            & $[a > 0], [a \not = 1]$
+	\end{tabular}
+\end{center}
 
 \section{The change of base theorem}
 To change the base, apply the formula:
@@ -1008,13 +972,12 @@ As an example:
 	\log_{3}81 & = \frac{\log_{10}81}{\log_{10}3} = \frac{1.90849}{0.47712} \approx 4
 \end{align*}
 
-\chapter{Trigonometric functions}
-\chapter{Radians and Degrees}
+\chapter{Trigonometry}
 
-Radians and degrees are two units used to measure angles.  One radian is defined as the angle formed when the length of an arc on a circle is equal to the radius of the circle. There are 2$\pi$ radians in a full circle, where $\pi$ is approximately equal to $3.14159$.\\
+\section{Radians and Degrees}
+Radians and degrees are two units used to measure angles.  One radian is defined as the angle formed when the length of an arc on a circle is equal to the radius of the circle. There are 2$\pi$ radians in a full circle, where $\pi$ is approximately equal to $3.14159$.
 
-Degrees, on the other hand, are based on the idea that a full circle contains $360\degree$. This means that one degree is equal to $\frac{1}{360}$ of a full circle.\\
-
+Degrees, on the other hand, are based on the idea that a full circle contains $360\degree$. This means that one degree is equal to $\frac{1}{360}$ of a full circle.
 
 \section{Converting between radians and degrees}
 To convert between radians and degrees, we can use the following relationships:
@@ -1025,7 +988,6 @@ and
 \[
 	1\degree = (\frac{\pi}{180})\rad
 \]
-
 
 To convert $45\degree$ to radians, use the second relationship:
 \begin{align*}
@@ -1038,7 +1000,7 @@ To convert $\frac{1}{3}\pi$ radians to degrees, use the first relationship:
 	                   & = 60\degree
 \end{align*}
 
-\chapter{The unit circle}
+\section{The unit circle}
 The unit circle is a circle with the centre point at origin, and has a radius of 1:
 \begin{center}
 	\begin{tikzpicture}
@@ -1053,11 +1015,130 @@ The unit circle is a circle with the centre point at origin, and has a radius of
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
+The equation of this circle is $x^2 + y^2 = 1$.
 
+\section{Quadrants}
+The four sections of a circle is separated into quadrants, the top right being the first quadrant, the top left being the second, the bottom left being the third, and the bottom right being the fourth.
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0,0) circle (2cm);
+		\draw [dashed] (-2,0) -- (2,0);
+		\draw [dashed] (0,-2) -- (0,2);
+		\node at (1,1) {I};
+		\node at (-1,1) {II};
+		\node at (-1,-1) {III};
+		\node at (1,-1) {IV};
+	\end{tikzpicture}
+\end{center}
+In the first quadrant, the value of all trigonometric functions are positive, however, in the second quadrant, only the sine is, and in the third, only the tangent, and in the forth, only the cosine.
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0,0) circle (2cm);
+		\draw [dashed] (-2,0) -- (2,0);
+		\draw [dashed] (0,-2) -- (0,2);
+		\node at (1,1) {All};
+		\node at (-1,1) {Sine};
+		\node at (-1,-1) {Tangent};
+		\node at (1,-1) {Cosine};
+	\end{tikzpicture}
+\end{center}
+This is true as sine is the y-axis value of the point along the unit circle which is intersected by the angle:
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0,0) circle (2cm);
+		\draw (0,0) -- (-1, 1.7);
+		\draw [dashed] (-2,0) -- (2,0);
+		\draw [dashed] (0,-2) -- (0,2);
+		\node at (-1.5, 1.7) {(-1, 1.7)};
+		\draw [->] (2,0);
+	\end{tikzpicture}
+\end{center}
 
-\chapter{Exact values}
+\section{Exact values}
+The exact values are as follows:
+\begin{center}
+	\begin{tabular}{c|c|c|c|c}
+		\multicolumn{2}{c|}{Angles ($\theta$)}   & \multicolumn{1}{c|}{\multirow{2}{*}{sin($\theta$)}} & \multicolumn{1}{c|}{\multirow{2}{*}{cos($\theta$)}} & \multicolumn{1}{c}{\multirow{2}{*}{tan($\theta$)}}                         \\
+		\multicolumn{1}{l|}{Degrees ($\degree$)} & Radians ($^c$)                                      & \multicolumn{1}{c|}{}                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c}{}  \\
+		\hline
+		0                                        & \multicolumn{1}{c|}{0}                              & \multicolumn{1}{c|}{0}                              & \multicolumn{1}{c|}{1}                             & \multicolumn{1}{c}{0} \\
+		\hline
+		30                                       & $\frac{1}{6}\pi$                                    & $\frac{1}{2}$                                       & $\frac{\sqrt{3}}{2}$                               & $\frac{1}{\sqrt{3}}$  \\
+		\hline
+		45                                       & $\frac{1}{4}\pi$                                    & $\frac{1}{\sqrt{2}}$                                & $\frac{1}{\sqrt{2}}$                               & \multicolumn{1}{c}{1} \\
+		\hline
+		60                                       & $\frac{1}{3}\pi$                                    & $\frac{\sqrt{3}}{2}$                                & $\frac{1}{2}$                                      & $\sqrt{3}$            \\
+		\hline
+		90                                       & $\frac{1}{2}\pi$                                    & \multicolumn{1}{c|}{1}                              & \multicolumn{1}{c|}{0}                             & n.a.
+	\end{tabular}
+\end{center}
+
+\section{Sine}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center
+		]
+			\addplot[domain=-360:360,samples=100]{sin(x)};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\section{Cosine}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center
+		]
+			\addplot[domain=-360:360,samples=100]{cos(x)};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\section{Transformations}
+\subsection{Amplitude}
+
+\subsection{Period}
+
+\subsection{Equilibrium}
+
+\subsection{Phase}
 
 \chapter{Derivatives}
+\section{Rate of change}
+\subsection{Constant}
 
+\subsection{Average}
+
+\subsection{Instantanious}
+
+\section{Limits}
+
+\section{First principles}
+
+\section{Derivatives}
+
+\subsection{Velocity and acceleration}
+
+\subsection{Stationary points}
+
+\subsection{Product rule}
+
+\subsection{Chain rule}
+
+\subsection{Quotient rule}
+
+\subsection{Power rule}
+
+\chapter{Probability distributions}
+\section{Variables}
+
+\section{Calculating probability distributions}
+
+\section{Expected values}
+
+\section{Standard distribution}
+
+\section{Variance}
 
 \end{document}
