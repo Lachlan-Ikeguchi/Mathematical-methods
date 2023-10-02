@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{pgfplots}
+\usepackage{tikz}
 \usepackage{pdfpages}
 \usepackage{parskip}
 \usepackage{polynom}
@@ -16,6 +17,10 @@
 
 \graphicspath{ {./images/} }
 \newcommand{\rad}{^{c}}
+\newenvironment{generalInformation}{}{}
+% equation
+\newenvironment{explanationOfTerms}{}{}
+\newenvironment{example}{}{}
 \newenvironment{note}{\begin{center}\em NOTE:\\}{\end{center}}
 
 % Title Page
@@ -37,22 +42,56 @@ This document was written to be used as a summary to help revise the content cov
 
 \chapter{Sequences}
 \section{Arithmetic sequences}
-An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
-
+\begin{generalInformation}
+	An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
+\end{generalInformation}
 \subsection{Recursive definition}
-The recursive definition of an arithmetic sequence is:
+\begin{generalInformation}
+	The recursive definition of an arithmetic sequence is:
+\end{generalInformation}
 \[
 	t_{n + 1} = t_n + d
 \]
-
-Where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by".
+\begin{explanationOfTerms}
+	Where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by".
+\end{explanationOfTerms}
+\begin{example}
+	Let:
+	\[
+		d := 3, t_n := 4
+	\]
+	\begin{align*}
+		t_{n + 1} & = t_n + d \\
+		t_{n + 1} & = 4 + 3   \\
+		t_{n + 1} & = 7       \\
+		t_{n + 2} & = 7 + 3   \\
+		t_{n + 2} & = 10      \\
+	\end{align*}
+\end{example}
 
 \subsection{General equation}
-The general equation for finding the $n^{\text{th}}$ term of the sequence is:
+\begin{generalInformation}
+	The general equation for finding the $n^{\text{th}}$ term of the sequence is:
+\end{generalInformation}
 \[
 	t_n = t_1 + (n - 1)d
 \]
-Where $t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
+\begin{explanationOfTerms}
+	Where $t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
+\end{explanationOfTerms}
+\begin{example}
+	Let:
+	\[
+		d := 2, n := 4, t_1 := 8
+	\]
+	\begin{align*}
+		t_n & = t_1 + (n - 1)d \\
+		t_n & = 8 + (4 - 1)2   \\
+		t_n & = 8 + (3)2       \\
+		    & = 8 + 6          \\
+		    & = 14
+	\end{align*}
+\end{example}
 
 \subsection{Sum of all prior arithmetic sequence}
 The sum of all arithmetic sequence is given by:
@@ -62,33 +101,36 @@ The sum of all arithmetic sequence is given by:
 Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
 
 \section{Geometric sequences}
-\subsection{General equation}
-Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.  The equation for the n\textsuperscript{th} term is:
-\[
-	t_n = t_1 \times r^{n - 1}
-\]
-Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the n\textsuperscript{th} term, and $t_1$ is the first term.
-
+Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.
 \subsection{Recursive definition}
 The recursive definition is:
 \[
 	t_{n + 1} = r \times t_n
 \]
+Where $t_{n + 1}$ is the next term, $r$ is the common difference, and $t_n$ is the current term.
 
-\subsection{Sum}
-\subsubsection{Sum of $n$ geometric sequence}
-The sum of the first n\textsuperscript{th} terms of a geometric sequence is:
+\subsection{General equation}
+The equation for the $n^{\text{th}}$ term is:
+\[
+	t_n = t_1 \times r^{n - 1}
+\]
+Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the $n^{\text{th}}$ term, and $t_1$ is the first term.
+
+\subsection{Sum of $n$ geometric sequence}
+The sum of the first $n^{\text{th}}$ terms of a geometric sequence is:
 \[
 	S_n = t_1 \times \frac{r^n - 1}{r - 1}
 \]
+Where $S_n$ is the sum up to the $n^{\text{th}}$ sequence, $t_1$ is the first term, and $r$ is the common difference.
 
-\subsubsection{Sum of all geometric sequence}
+\subsection{Sum of all geometric sequence}
 And the sum of an infinite geometric sequence is:
 \[
 	S_{\infty} = \frac{t_1}{1 - r}
 \]
+Where $S_{\infty}$ is the sum up to infinity, $t_1$ is the first term, and $r$ is the common difference.
 \begin{note}
-	This equation only provides a non-infinite solution where $-1 < r < 1$
+	This equation only provides a non-infinite solution where $-1 < r < 1$.
 \end{note}
 
 Compound interest is:
@@ -897,14 +939,12 @@ An exponential function increases or decreases at an accelerating rate, they hav
 Where positive $a$ values increases exponentially, and negative $a$ approaches the asymptote as the x-value increases.
 
 \section{Translations}
-\subsection{x-axis}
 To translate the exponential function along the x-axis, use the formula:
 \[
 	y = a^{x - c}
 \]
-Where $c$ is the translation along the x-axis.\\
+Where $c$ is the translation along the x-axis.
 
-\subsection{y-axis}
 To translate the exponential function along the y-axis, use the formula:
 \[
 	y = a^x + d
@@ -912,14 +952,12 @@ To translate the exponential function along the y-axis, use the formula:
 Where $d$ is the translation along the y-axis.
 
 \section{Dilations}
-\subsection{x-axis}
 To dilate the exponential function from the x-axis, use the formula:
 \[
 	y = b \times a^x
 \]
-Where $b$ is the dilation factor from the y-axis.  This dilation affects the y-intercept, but the asymptote stays at $y = 0$\\
+Where $b$ is the dilation factor from the y-axis.  This dilation affects the y-intercept, but the asymptote stays at $y = 0$.
 
-\subsection{y-axis}
 To dilate the exponential function from the y-axis, use the formula:
 \[
 	y = a^{kx}
@@ -934,7 +972,7 @@ A logarithm is defined as:
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
-				axis lines = left,
+				axis lines = center,
 				xlabel = $x$,
 				ylabel = {$f(x)$},
 			]
@@ -973,7 +1011,6 @@ As an example:
 \end{align*}
 
 \chapter{Trigonometry}
-
 \section{Radians and Degrees}
 Radians and degrees are two units used to measure angles.  One radian is defined as the angle formed when the length of an arc on a circle is equal to the radius of the circle. There are 2$\pi$ radians in a full circle, where $\pi$ is approximately equal to $3.14159$.
 
@@ -982,26 +1019,26 @@ Degrees, on the other hand, are based on the idea that a full circle contains $3
 \section{Converting between radians and degrees}
 To convert between radians and degrees, we can use the following relationships:
 \[
-	1\rad = ({\frac{180}{\pi}})\degree
+	1\rad = \left({\frac{180}{\pi}}\right)\degree
 \]
 and
 \[
-	1\degree = (\frac{\pi}{180})\rad
+	1\degree = \left(\frac{\pi}{180}\right)\rad
 \]
 
 To convert $45\degree$ to radians, use the second relationship:
 \begin{align*}
-	45\degree & = 45 \cdot (\frac{\pi}{180})\rad \\
+	45\degree & = 45 \cdot \left(\frac{\pi}{180}\right)\rad \\
 	          & = \frac{1}{4}\pi\rad
 \end{align*}
 To convert $\frac{1}{3}\pi$ radians to degrees, use the first relationship:
 \begin{align*}
-	\frac{1}{3}\pi\rad & = \frac{1}{3}\pi \cdot (\frac{180}{\pi})\degree \\
+	\frac{1}{3}\pi\rad & = \frac{1}{3}\pi \cdot \left(\frac{180}{\pi}\right)\degree \\
 	                   & = 60\degree
 \end{align*}
 
 \section{The unit circle}
-The unit circle is a circle with the centre point at origin, and has a radius of 1:
+The unit circle is a circle with the centre point at origin, and has a radius of 1, meaning that it has an equation of $x^2 + y^2 = 1$:
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -1009,13 +1046,11 @@ The unit circle is a circle with the centre point at origin, and has a radius of
 				axis equal,
 				xmin=-1.5, xmax=1.5,
 				ymin=-1.5, ymax=1.5,
-				xlabel=$x$, ylabel=$y$,
 			]
 			\addplot [domain=0:2*pi, samples=100, smooth] ({cos(deg(x))},{sin(deg(x))});
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
-The equation of this circle is $x^2 + y^2 = 1$.
 
 \section{Quadrants}
 The four sections of a circle is separated into quadrants, the top right being the first quadrant, the top left being the second, the bottom left being the third, and the bottom right being the fourth.
@@ -1042,16 +1077,25 @@ In the first quadrant, the value of all trigonometric functions are positive, ho
 		\node at (1,-1) {Cosine};
 	\end{tikzpicture}
 \end{center}
-This is true as sine is the y-axis value of the point along the unit circle which is intersected by the angle:
+This is true as sine is the y-axis value of the point along the unit circle which is intersected by an angle, cosine is the x-axis, and tangent is the gradient from the origin to the intersection point.
 \begin{center}
 	\begin{tikzpicture}
 		\draw (0,0) circle (2cm);
-		\draw (0,0) -- (-1, 1.7);
+		\draw [->] (0,0) -- (-1, 1.7);
 		\draw [dashed] (-2,0) -- (2,0);
 		\draw [dashed] (0,-2) -- (0,2);
-		\node at (-1.5, 1.7) {(-1, 1.7)};
-		\draw [->] (2,0);
+		\node at (-1.7, 2) {(-1, 1.7)};
+		\filldraw [black] (-1, 1.7) circle (1pt);
+		\draw (0.5, 0) arc (0:120:0.5);
+		\node at (0.5, 1) {$\frac{2}{3}\pi$};
+		\draw [dotted, red] (-1, 1.7) -- (1, -1.7);
 	\end{tikzpicture}
+	\begin{align*}
+		\therefore \sin\left(\frac{2}{3}\pi\right) & = 1.7            \\
+		\cos\left(\frac{2}{3}\pi\right)            & = -1             \\
+		\tan\left(\frac{2}{3}\pi\right)            & = \frac{1.7}{-1} \\
+		                                           & = -1.7
+	\end{align*}
 \end{center}
 
 \section{Exact values}
@@ -1073,23 +1117,24 @@ The exact values are as follows:
 	\end{tabular}
 \end{center}
 
-\section{Sine}
+\section{Graphs}
+\subsection{Sine}
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
-			axis lines = center
-		]
+				axis lines = center
+			]
 			\addplot[domain=-360:360,samples=100]{sin(x)};
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
 
-\section{Cosine}
+\subsection{Cosine}
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
-			axis lines = center
-		]
+				axis lines = center
+			]
 			\addplot[domain=-360:360,samples=100]{cos(x)};
 		\end{axis}
 	\end{tikzpicture}
@@ -1097,8 +1142,34 @@ The exact values are as follows:
 
 \section{Transformations}
 \subsection{Amplitude}
+\[
+	y = A\sin(x)
+\]
+Where $A$ is the dilation factor, or the amplitude factor.
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				axis lines = center
+			]
+			\addplot[domain=-360:360,samples=100]{sin(x)};
+			\addplot[domain=-360:360,samples=100,red]{2 * sin(x)};
+			\addplot[domain=-360:360,samples=100,blue]{-3 * sin(x)};
+		\end{axis}
+	\end{tikzpicture}
+
+	Where the red graph is $2\sin(x)$, black is $\sin(x)$, and blue is $-3\sin(x)$.
+\end{center}
 
 \subsection{Period}
+\begin{generalInformation}
+	To change the length of the wavelength, or the period is as follows:
+\end{generalInformation}
+\[
+	y = \sin(B \times x)
+\]
+\begin{explanationOfTerms}
+	Where $B$ is the dialation from the y-axis or the period.
+\end{explanationOfTerms}
 
 \subsection{Equilibrium}
 

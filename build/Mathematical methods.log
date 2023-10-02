@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.22)  7 SEP 2023 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.22)  28 SEP 2023 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -548,24 +548,24 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 ) (c:\Users\lachl\Proton Drive\3dFx3Z2w7VxlWxPhpZUNIZpInRna\My files\my textbooks\Mathematical methods\build\Mathematical methods.aux)
 \openout1 = `"Mathematical methods.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -601,13 +601,13 @@ LaTeX Font Info:    ... okay on input line 29.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 29.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 29.
+LaTeX Info: Redefining \celsius on input line 34.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 34.
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 29.
-Package gensymb Info: Using \Omega for \ohm on input line 29.
+LaTeX Info: Redefining \ohm on input line 34.
+Package gensymb Info: Using \Omega for \ohm on input line 34.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -630,7 +630,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\lachl\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 34.
  (c:\Users\lachl\Proton Drive\3dFx3Z2w7VxlWxPhpZUNIZpInRna\My files\my textbooks\Mathematical methods\build\Mathematical methods.out) (c:\Users\lachl\Proton Drive\3dFx3Z2w7VxlWxPhpZUNIZpInRna\My files\my textbooks\Mathematical methods\build\Mathematical methods.out)
 \@outlinefile=\write4
 \openout4 = `"Mathematical methods.out"'.
@@ -647,11 +647,11 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
  (C:\Users\lachl\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
  (C:\Users\lachl\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -663,84 +663,93 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `"Mathematical methods.toc"'.
 
-<./images/formula-book.pdf, id=576, 597.50829pt x 845.0471pt>
+<./images/formula-book.pdf, id=567, 597.50829pt x 845.0471pt>
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf>
-Package pdftex.def Info: ./images/formula-book.pdf  used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf  used on input line 41.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf>
-Package pdftex.def Info: ./images/formula-book.pdf  used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf  used on input line 41.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<./images/formula-book.pdf, id=579, page=1, 597.50829pt x 845.0471pt>
+<./images/formula-book.pdf, id=570, page=1, 597.50829pt x 845.0471pt>
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 1>
-Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 1>
-Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [5]
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 1>
-Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 1>
-Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 1>
-Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [6 <./images/formula-book.pdf>]
-<./images/formula-book.pdf, id=601, page=2, 597.50829pt x 845.0471pt>
+<./images/formula-book.pdf, id=592, page=2, 597.50829pt x 845.0471pt>
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 2>
-Package pdftex.def Info: ./images/formula-book.pdf , page2 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page2 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 2>
-Package pdftex.def Info: ./images/formula-book.pdf , page2 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page2 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 2>
-Package pdftex.def Info: ./images/formula-book.pdf , page2 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page2 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [7 <./images/formula-book.pdf>]
-<./images/formula-book.pdf, id=637, page=3, 597.50829pt x 845.0471pt>
+<./images/formula-book.pdf, id=628, page=3, 597.50829pt x 845.0471pt>
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 3>
-Package pdftex.def Info: ./images/formula-book.pdf , page3 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page3 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 3>
-Package pdftex.def Info: ./images/formula-book.pdf , page3 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page3 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 3>
-Package pdftex.def Info: ./images/formula-book.pdf , page3 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page3 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [8 <./images/formula-book.pdf>]
-<./images/formula-book.pdf, id=667, page=4, 597.50829pt x 845.0471pt>
+<./images/formula-book.pdf, id=658, page=4, 597.50829pt x 845.0471pt>
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 4>
-Package pdftex.def Info: ./images/formula-book.pdf , page4 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page4 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 4>
-Package pdftex.def Info: ./images/formula-book.pdf , page4 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page4 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ./images/formula-book.pdf Graphic file (type pdf)
 <use ./images/formula-book.pdf, page 4>
-Package pdftex.def Info: ./images/formula-book.pdf , page4 used on input line 36.
+Package pdftex.def Info: ./images/formula-book.pdf , page4 used on input line 41.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [9 <./images/formula-book.pdf>] [10
 
 ]
 Chapter 1.
-[11] [12]
+[11]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 119.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 119.
+
+[12]
 Chapter 2.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -748,7 +757,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [13
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
@@ -764,7 +773,7 @@ Chapter 3.
 ]
 Chapter 4.
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
@@ -777,17 +786,17 @@ Chapter 5.
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--466
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--487
+Underfull \hbox (badness 10000) in paragraph at lines 527--529
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--493
+Underfull \hbox (badness 10000) in paragraph at lines 533--535
 
  []
 
@@ -796,7 +805,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 491--493
 ]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--512
+Underfull \hbox (badness 10000) in paragraph at lines 552--554
 
  []
 
@@ -806,36 +815,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 510--512
 Chapter 8.
 [29] [30]
 Chapter 9.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 614.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 656.
 (C:\Users\lachl\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 614.
-<./images/venn diagrams.png, id=788, 733.99219pt x 316.93407pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 656.
+<./images/venn diagrams.png, id=777, 733.99219pt x 316.93407pt>
 File: ./images/venn diagrams.png Graphic file (type png)
 <use ./images/venn diagrams.png>
-Package pdftex.def Info: ./images/venn diagrams.png  used on input line 625.
+Package pdftex.def Info: ./images/venn diagrams.png  used on input line 667.
 (pdftex.def)             Requested size: 366.9952pt x 158.46664pt.
  [31
 
  <./images/venn diagrams.png>]
-<./images/tree diagrams.png, id=796, 507.39563pt x 405.01312pt>
+<./images/tree diagrams.png, id=785, 507.39563pt x 405.01312pt>
 File: ./images/tree diagrams.png Graphic file (type png)
 <use ./images/tree diagrams.png>
-Package pdftex.def Info: ./images/tree diagrams.png  used on input line 651.
+Package pdftex.def Info: ./images/tree diagrams.png  used on input line 693.
 (pdftex.def)             Requested size: 253.69719pt x 202.50606pt.
-<./images/tree diagrams probability.png, id=797, 467.49657pt x 404.26031pt>
+<./images/tree diagrams probability.png, id=786, 467.49657pt x 404.26031pt>
 File: ./images/tree diagrams probability.png Graphic file (type png)
 <use ./images/tree diagrams probability.png>
-Package pdftex.def Info: ./images/tree diagrams probability.png  used on input line 656.
+Package pdftex.def Info: ./images/tree diagrams probability.png  used on input line 698.
 (pdftex.def)             Requested size: 233.74771pt x 202.12965pt.
  [32 <./images/tree diagrams.png> <./images/tree diagrams probability.png>] [33] [34
 
 ]
 Chapter 10.
 
-Underfull \hbox (badness 10000) in paragraph at lines 720--722
+Underfull \hbox (badness 10000) in paragraph at lines 762--764
 
  []
 
@@ -846,7 +855,7 @@ Chapter 11.
 [37] [38]
 Chapter 12.
 
-Overfull \hbox (27.41751pt too wide) in paragraph at lines 839--852
+Overfull \hbox (27.41751pt too wide) in paragraph at lines 881--894
  [] 
  []
 
@@ -863,16 +872,6 @@ Chapter 13.
 
 ]
 Chapter 14.
-
-Underfull \hbox (badness 10000) in paragraph at lines 904--906
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 919--921
-
- []
-
 [43] [44
 
 ]
@@ -881,14 +880,20 @@ Chapter 15.
 
 ]
 Chapter 16.
-[47]
+
+Underfull \vbox (badness 1924) has occurred while \output is active []
+
+ [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48] [49] [50
+ [48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [49] [50]
 Chapter 17.
-[51] [52
+[51
+
+] [52
 
 ]
 Chapter 18.
@@ -898,20 +903,20 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `"Mathematical methods".out' has not changed.
-(rerunfilecheck)             Checksum: 9251B01C8EC40968B3E010F2D140633B;14365.
+(rerunfilecheck)             Checksum: 4198E030E7B18BBBCA0ED143F7DCA31B;14439.
  ) 
 Here is how much of TeX's memory you used:
- 33270 strings out of 475502
- 776653 string characters out of 5761813
+ 33313 strings out of 475502
+ 777869 string characters out of 5761813
  1948248 words of memory out of 5000000
- 53836 multiletter control sequences out of 15000+600000
+ 53883 multiletter control sequences out of 15000+600000
  568011 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,20n,103p,839b,2058s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "c:\Users\lachl\Proton Drive\3dFx3Z2w7VxlWxPhpZUNIZpInRna\My files\my textbooks\Mathematical methods\build\Mathematical methods.pdf" (53 pages, 1027463 bytes).
+ 99i,20n,103p,835b,2058s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "c:\Users\lachl\Proton Drive\3dFx3Z2w7VxlWxPhpZUNIZpInRna\My files\my textbooks\Mathematical methods\build\Mathematical methods.pdf" (53 pages, 1039612 bytes).
 PDF statistics:
- 1000 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 500000)
- 935 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 992 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 919 words of extra memory for PDF output out of 10000 (max. 10000000)
 

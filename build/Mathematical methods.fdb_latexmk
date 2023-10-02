@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1694047937 "c:/Users/lachl/Proton Drive/3dFx3Z2w7VxlWxPhpZUNIZpInRna/My files/my textbooks/Mathematical methods/Mathematical methods.tex" "build/Mathematical methods.pdf" "Mathematical methods" 1694047945 0
-  "C:/Users/lachl/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1693444284 82507 a9eef8696c92627b87e9975edea03b2a ""
+["pdflatex"] 1695864304 "c:/Users/lachl/Proton Drive/3dFx3Z2w7VxlWxPhpZUNIZpInRna/My files/my textbooks/Mathematical methods/Mathematical methods.tex" "build/Mathematical methods.pdf" "Mathematical methods" 1695864311 2
+  "C:/Users/lachl/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1694138479 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/lachl/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1692704293 24120620 ded02642a5e78de18cfa392714b0b6ba ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -30,6 +30,7 @@
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -224,11 +225,11 @@
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/lachl/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Mathematical methods.tex" 1694047910 43455 5b1a34a39e80cfa39429e6e5cfcb675c ""
-  "build/Mathematical methods.aux" 1694047944 15199 11f08732ae7976f1d690c229355bde2e "pdflatex"
-  "build/Mathematical methods.out" 1694047944 14365 9251b01c8ec40968b3e010f2d140633b "pdflatex"
-  "build/Mathematical methods.toc" 1694047944 8725 6048eadf528c1da4ea0eacd416d707e8 "pdflatex"
-  "c:/Users/lachl/Proton Drive/3dFx3Z2w7VxlWxPhpZUNIZpInRna/My files/my textbooks/Mathematical methods/Mathematical methods.tex" 1694047910 43455 5b1a34a39e80cfa39429e6e5cfcb675c ""
+  "Mathematical methods.tex" 1695864294 45534 e465d7ffcf1863fdc83ce22be2ab8aaa ""
+  "build/Mathematical methods.aux" 1695864310 14778 895c91c1e2f30b2bb7573943b05c501d "pdflatex"
+  "build/Mathematical methods.out" 1695864310 14439 4198e030e7b18bbbca0ed143f7dca31b "pdflatex"
+  "build/Mathematical methods.toc" 1695864310 8468 8a5ef75c1647574feea42552cef1166c "pdflatex"
+  "c:/Users/lachl/Proton Drive/3dFx3Z2w7VxlWxPhpZUNIZpInRna/My files/my textbooks/Mathematical methods/Mathematical methods.tex" 1695864294 45534 e465d7ffcf1863fdc83ce22be2ab8aaa ""
   "images/formula-book.pdf" 1693442523 499602 ce693ea7e461480abb12e6c840c9fc66 ""
   "images/tree diagrams probability.png" 1684121186 58563 713225ef1cc07d4e48549222314b3051 ""
   "images/tree diagrams.png" 1684103470 35215 40b8d1323aad2b5dac291eed2ec019ea ""

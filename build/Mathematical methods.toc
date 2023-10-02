@@ -4,12 +4,11 @@
 \contentsline {subsection}{\numberline {1.1.1}Recursive definition}{11}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}General equation}{11}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Sum of all prior arithmetic sequence}{11}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Geometric sequences}{11}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}General equation}{11}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Recursive definition}{11}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Sum}{12}{subsection.1.2.3}%
-\contentsline {subsubsection}{Sum of $n$ geometric sequence}{12}{section*.2}%
-\contentsline {subsubsection}{Sum of all geometric sequence}{12}{section*.3}%
+\contentsline {section}{\numberline {1.2}Geometric sequences}{12}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Recursive definition}{12}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}General equation}{12}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Sum of $n$ geometric sequence}{12}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Sum of all geometric sequence}{12}{subsection.1.2.4}%
 \contentsline {chapter}{\numberline {2}Functions and relations}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Functions}{13}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Interval notation}{14}{section.2.2}%
@@ -68,11 +67,7 @@
 \contentsline {chapter}{\numberline {13}Index laws}{41}{chapter.13}%
 \contentsline {chapter}{\numberline {14}Exponential functions}{43}{chapter.14}%
 \contentsline {section}{\numberline {14.1}Translations}{43}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}x-axis}{43}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}y-axis}{43}{subsection.14.1.2}%
 \contentsline {section}{\numberline {14.2}Dilations}{43}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}x-axis}{43}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}y-axis}{43}{subsection.14.2.2}%
 \contentsline {chapter}{\numberline {15}Logarithms}{45}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Laws}{45}{section.15.1}%
 \contentsline {section}{\numberline {15.2}The change of base theorem}{45}{section.15.2}%
@@ -81,14 +76,15 @@
 \contentsline {section}{\numberline {16.2}Converting between radians and degrees}{47}{section.16.2}%
 \contentsline {section}{\numberline {16.3}The unit circle}{47}{section.16.3}%
 \contentsline {section}{\numberline {16.4}Quadrants}{48}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Exact values}{48}{section.16.5}%
-\contentsline {section}{\numberline {16.6}Sine}{49}{section.16.6}%
-\contentsline {section}{\numberline {16.7}Cosine}{49}{section.16.7}%
-\contentsline {section}{\numberline {16.8}Transformations}{49}{section.16.8}%
-\contentsline {subsection}{\numberline {16.8.1}Amplitude}{49}{subsection.16.8.1}%
-\contentsline {subsection}{\numberline {16.8.2}Period}{49}{subsection.16.8.2}%
-\contentsline {subsection}{\numberline {16.8.3}Equilibrium}{49}{subsection.16.8.3}%
-\contentsline {subsection}{\numberline {16.8.4}Phase}{49}{subsection.16.8.4}%
+\contentsline {section}{\numberline {16.5}Exact values}{49}{section.16.5}%
+\contentsline {section}{\numberline {16.6}Graphs}{49}{section.16.6}%
+\contentsline {subsection}{\numberline {16.6.1}Sine}{49}{subsection.16.6.1}%
+\contentsline {subsection}{\numberline {16.6.2}Cosine}{50}{subsection.16.6.2}%
+\contentsline {section}{\numberline {16.7}Transformations}{50}{section.16.7}%
+\contentsline {subsection}{\numberline {16.7.1}Amplitude}{50}{subsection.16.7.1}%
+\contentsline {subsection}{\numberline {16.7.2}Period}{50}{subsection.16.7.2}%
+\contentsline {subsection}{\numberline {16.7.3}Equilibrium}{50}{subsection.16.7.3}%
+\contentsline {subsection}{\numberline {16.7.4}Phase}{50}{subsection.16.7.4}%
 \contentsline {chapter}{\numberline {17}Derivatives}{51}{chapter.17}%
 \contentsline {section}{\numberline {17.1}Rate of change}{51}{section.17.1}%
 \contentsline {subsection}{\numberline {17.1.1}Constant}{51}{subsection.17.1.1}%
