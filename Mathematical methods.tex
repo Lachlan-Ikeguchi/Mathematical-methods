@@ -25,41 +25,55 @@
 
 % Title Page
 \title{Mathematical methods}
-\author{Lachlan Takumi Ikeguchi}
+\author{Lachlan Ikeguchi}
 
 \pgfplotsset{width=7cm,compat=1.18}
 % \usepgfplotslibrary{external}
 % \tikzexternalize[prefix=images/]
 
 \begin{document}
+
 \maketitle
+
 \tableofcontents
+
+
 
 \section{The purpose}
 This document was written to be used as a summary to help revise the content covered mathematical methods.  For any inquiries, feedback, and further explanations, contact lachlanprivate@duck.com or through the discord server: \url{https://discord.gg/6P8rddkXFr}. I encourage you to let me know of any topic I missed, how I could explain it better, or how it could be reworded or formatted to be more helpful in its purpose.  The goal of this document is to be a comprehensive summary of everything you need to know.
 
 \includepdf[pages=-]{./images/formula-book.pdf}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Sequences}
 \section{Arithmetic sequences}
 \begin{generalInformation}
 	An arithmetic sequence is a sequence of numbers where the terms are increasing or decreasing at a constant rate.
 \end{generalInformation}
+
+
 \subsection{Recursive definition}
 \begin{generalInformation}
 	The recursive definition of an arithmetic sequence is:
 \end{generalInformation}
+
 \[
 	t_{n + 1} = t_n + d
 \]
+
 \begin{explanationOfTerms}
 	Where $t_{n + 1}$ is the next term, $t_n$ is the current term, and $d$ is the common difference or ``by how much the sequence goes up by".
 \end{explanationOfTerms}
+
 \begin{example}
 	Let:
+
 	\[
 		d := 3, t_n := 4
 	\]
+
 	\begin{align*}
 		t_{n + 1} & = t_n + d \\
 		t_{n + 1} & = 4 + 3   \\
@@ -69,21 +83,27 @@ This document was written to be used as a summary to help revise the content cov
 	\end{align*}
 \end{example}
 
+
 \subsection{General equation}
 \begin{generalInformation}
 	The general equation for finding the $n^{\text{th}}$ term of the sequence is:
 \end{generalInformation}
+
 \[
 	t_n = t_1 + (n - 1)d
 \]
+
 \begin{explanationOfTerms}
 	Where $t_n$ is the $n^{\text{th}}$ term of the sequence, $t_1$ is the first term of the sequence, and $d$ is the common difference.
 \end{explanationOfTerms}
+
 \begin{example}
 	Let:
+
 	\[
 		d := 2, n := 4, t_1 := 8
 	\]
+
 	\begin{align*}
 		t_n & = t_1 + (n - 1)d \\
 		t_n & = 8 + (4 - 1)2   \\
@@ -93,58 +113,89 @@ This document was written to be used as a summary to help revise the content cov
 	\end{align*}
 \end{example}
 
+
 \subsection{Sum of all prior arithmetic sequence}
 The sum of all arithmetic sequence is given by:
+
 \[
 	S_n = \frac{n}{2}(2t_1 + (n - 1)d) = \frac{n}{2}(t_1 + t_n)
 \]
-Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
+
+\begin{explanationOfTerms}
+	Where $S_n$ is the sum of the prior sequences up to the $n^{\text{th}}$ term, $n$ is the number of sequences, $d$ is the common difference, $t_1$ is the first term, and $t_n$ is the $n^{\text{th}}$ term.
+\end{explanationOfTerms}
+
+\begin{example}
+	Let:
+
+	\[
+		
+	\]
+
+\end{example}
+
 
 \section{Geometric sequences}
 Geometric sequences are similar to arithmetic sequences, however, it multiplies instead of add the common difference.
+
+
 \subsection{Recursive definition}
 The recursive definition is:
+
 \[
 	t_{n + 1} = r \times t_n
 \]
+
 Where $t_{n + 1}$ is the next term, $r$ is the common difference, and $t_n$ is the current term.
+
 
 \subsection{General equation}
 The equation for the $n^{\text{th}}$ term is:
+
 \[
 	t_n = t_1 \times r^{n - 1}
 \]
+
 Where $r$ is the common ratio, $n$ is the term number, $t_n$ is the $n^{\text{th}}$ term, and $t_1$ is the first term.
+
 
 \subsection{Sum of $n$ geometric sequence}
 The sum of the first $n^{\text{th}}$ terms of a geometric sequence is:
+
 \[
 	S_n = t_1 \times \frac{r^n - 1}{r - 1}
 \]
+
 Where $S_n$ is the sum up to the $n^{\text{th}}$ sequence, $t_1$ is the first term, and $r$ is the common difference.
+
 
 \subsection{Sum of all geometric sequence}
 And the sum of an infinite geometric sequence is:
+
 \[
 	S_{\infty} = \frac{t_1}{1 - r}
 \]
+
 Where $S_{\infty}$ is the sum up to infinity, $t_1$ is the first term, and $r$ is the common difference.
+
 \begin{note}
 	This equation only provides a non-infinite solution where $-1 < r < 1$.
 \end{note}
 
-Compound interest is:
-\[
-	A = (1 + r)^n \times P
-\]
-Where $A$ is the total amount of the investment, $P$ is the principle, (i.e. the initial investment), $r$ is the percentage interest, and $n$ is the number of compounding periods (i.e. how many times the interest has been taken)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \chapter{Functions and relations}
 \section{Functions}
-Functions is a mathematical concept where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be used.  A simple function which calculates the y-values along a parabola with the x-coordinates as input could be:
+\begin{generalInformation}
+	Functions is a mathematical concept where if given an input, it performs some operations, and returns an output.  They have the mathematical notation of $f(x)$ where $f$ can be seen as the name of the function and the values within the parenthesis as inputs to the function.  A function must be defined for it to be used.  A simple function which calculates the y-values along a parabola with the x-coordinates as input could be:
+\end{generalInformation}
+
 \[
 	M(x) := x^2
 \]
+
 \begin{align*}
 	M(x) & = x^2   \\
 	M(3) & = (3)^2 \\
